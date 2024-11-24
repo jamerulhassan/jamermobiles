@@ -157,7 +157,7 @@ const Apple = ({handleVisit}) => {
             <div className="MobilePhoneList__mobile mobile8">
             <figure className='mobile__figure figure8'>
                   <img src={AppleiPhone12} 
-                  alt="Apple iPhone12"
+                  alt="Apple iPhone 12"
                   title="Apple iPhone12" 
                   width={'200px'}
                   height={'200px'}
@@ -174,46 +174,7 @@ const Apple = ({handleVisit}) => {
                 <h2 className='price'>Rs. 54,900</h2>
                 <h2 className='visit' onClick={(e)=>{handleVisit(e)}}><Link to="BuyPage" >visit</Link></h2>
             </div>
-            {/* <div className="MobilePhoneList__mobile mobile9">
-            <figure className='mobile__figure figure9'>
-                  <img src={y305G} 
-                  alt="Vivo y305G" 
-                  width={'200px'}
-                  height={'200px'}
-                  />
-                </figure>
-                <figcaption className='mobile__figurecaption figurecaption9'>
-                  <h1>vivo Y30 5G </h1>
-                  <p>RAM 6 GB |</p>
-                  <p>Display
-                  6.51 inches 16.54 cm HD+, IPS LCD</p>
-                  <p>Rear Camera, 50 MP + 2 MP ; Front Camera, 8 MP</p>
-                  <p>5000mAh battery</p>
-                  <p></p>
-                </figcaption>
-                <h2 className='price'>Rs. 18,790</h2>
-                <h2 className='visit'>visit</h2>
-            </div>
-            <div className="MobilePhoneList__mobile mobile10">
-            <figure className='mobile__figure figure10'>
-                  <img src={y305G} 
-                  alt="Vivo y305G" 
-                  width={'200px'}
-                  height={'200px'}
-                  />
-                </figure>
-                <figcaption className='mobile__figurecaption figurecaption10'>
-                  <h1>vivo Y30 5G </h1>
-                  <p>RAM 6 GB |</p>
-                  <p>Display
-                  6.51 inches 16.54 cm HD+, IPS LCD</p>
-                  <p>Rear Camera, 50 MP + 2 MP ; Front Camera, 8 MP</p>
-                  <p>5000mAh battery</p>
-                  <p></p>
-                </figcaption>
-                <h2 className='price'>Rs. 18,790</h2>
-                <h2 className='visit'>visit</h2>
-            </div> */}
+            
         </section>
     </main>
   )
