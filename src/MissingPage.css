@@ -1,0 +1,19 @@
+.errorMsg{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 30px;
+}
+.errorMsg__msg{
+    color: #fb641b;
+}
+.errorMsg__link{
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: center;
+    align-items: center;
+    gap: 20px;
+}

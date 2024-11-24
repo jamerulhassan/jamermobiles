@@ -1,0 +1,76 @@
+
+.Help{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 25px;
+}
+.Help__content1{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.Help__content1 > * {
+    width: 100%;
+    text-align: center;
+}
+.content__mail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mail{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mail *{
+    align-self: center;
+}
+.mail p{
+    width: 100%;
+    overflow-wrap: break-word;
+}
+.content__socialMedia{
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+.content__socialMedia * {
+    cursor: pointer;
+}
+.content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 90%;
+    gap: 10px;
+    font-family: var(--FF);
+}
+.Help__Content2{
+    background-color: var(--SIXTHCOLOR);
+    padding: 20px;
+    border-radius: 5px;
+}
+.Help__Content3{
+    background-color:var(--FIFTHCOLOR);
+    padding: 20px;
+    border-radius: 5px;
+}
+.Help__Content3 h2,.Help__Content3 p{
+    width: 100%;
+    overflow-wrap: break-word;
+}
+.Help__Content2 h2,.Help__Content2 p{
+    width: 100%;
+    overflow-wrap: break-word;
+}

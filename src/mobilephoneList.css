@@ -1,0 +1,47 @@
+
+.MobilePhoneList{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.MobilePhoneList__mobile{
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    /* background-color: rgb(179, 172, 172); */
+    border: 1px solid black;
+    border-width: 0 0 1px 0;
+    box-shadow: 0px 5px 5px black;
+    gap: 20px;
+}
+.mobile__figure{
+    width: clamp(250px,90vw,350px);
+}
+.mobile__figure img{
+    width: 100%;
+    height: auto;
+}
+.mobile__figure img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.visit a{
+    color: var(--SECONDFC);
+    text-decoration: none;
+}
+.visit{
+    background-color: var(--BTNCOLOR);
+    color: var(--SECONDFC);
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+.visit:hover{
+    cursor:pointer;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    text-decoration: underline;
+}

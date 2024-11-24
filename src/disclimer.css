@@ -1,0 +1,26 @@
+.Disclimer{
+    width: min(90vw,500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-family:var(--SECONDFF);
+    background-color:var(--FIFTHCOLOR);
+    color: var(--SECONDFC);
+    padding: 20px;
+    border-radius: var(--BORDERRADIUS);
+    
+}
+.Disclimer__heading{
+    align-self: center;
+    font-family:var(--THIRDFF);
+    text-align: center;
+}
+.Disclimer__content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.content__para{
+    color:var(--SECONDCOLOR);
+}
