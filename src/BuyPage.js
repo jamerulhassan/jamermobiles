@@ -3,7 +3,6 @@ import './buyPage.css'
 import { FaCircleInfo,FaGift } from 'react-icons/fa6'
 const BuyPage = () => {
   const mobileInformations=JSON.parse(localStorage.getItem("mySessionStorage"))
-  console.log(mobileInformations);
   const mobileImage=mobileInformations.mobileImage;
   return (
     <main>
@@ -18,17 +17,17 @@ const BuyPage = () => {
             />
           </figure>
           <figcaption className="imgAndDetails__figcaption imgAndDetails">
-              <h1>{mobileInformations.mobileName}</h1>
-              <p>{mobileInformations.mobileRamRom}</p>
-              <p>{mobileInformations.mobileResolution}</p>
-              <p>{mobileInformations.mobileCamera}</p>
-              <p>{mobileInformations.mobileBattery}</p>
-              <p>{mobileInformations.mobileOs}</p>
-              <h1 className='figcaption__offerHeading'>Available offers</h1>
-              <FaGift /><p>Bank<span className="off">Offer5%</span>Unlimited Cashback on Flipkart Axis Bank Credit CardT&C</p>
-              <FaGift /><p>Special PriceGet <span className="off">extra ₹3945 off</span> (price inclusive of cashback/coupon)T&C</p>
-              <FaGift /><p><span className="off">Extra 10% off</span> on Combo with Mobile - oneplusT&C</p>
-              <FaGift /><p>EMI starting from ₹530/month</p>
+            <h1>{mobileInformations.mobileName}</h1>
+            <p>{mobileInformations.mobileRamRom}</p>
+            <p>{mobileInformations.mobileResolution}</p>
+            <p>{mobileInformations.mobileCamera}</p>
+            <p>{mobileInformations.mobileBattery}</p>
+            <p>{mobileInformations.mobileOs}</p>
+            <h1 className='figcaption__offerHeading'>Available offers</h1>
+            <FaGift /><p>Bank<span className="off">Offer5%</span>Unlimited Cashback on Flipkart Axis Bank Credit CardT&C</p>
+            <FaGift /><p>Special PriceGet <span className="off">extra ₹3945 off</span> (price inclusive of cashback/coupon)T&C</p>
+            <FaGift /><p><span className="off">Extra 10% off</span> on Combo with Mobile - oneplusT&C</p>
+            <FaGift /><p>EMI starting from ₹530/month</p>
           </figcaption>  
           <div className="imgAndDetails__notice imgAndDetails">
             <h1 className='notice__h1'>Notice</h1>
@@ -46,8 +45,8 @@ const BuyPage = () => {
         </div>
       </div>
       <div className="BuyPage__buy BuyPage__Childrens">
-          <h2 className='buy__priceOfPhone'>{mobileInformations.mobilePrice}</h2>
-          <h3 className='buy__buyButton'>Buy</h3>
+        <h2 className='buy__priceOfPhone'>{mobileInformations.mobilePrice}</h2>
+        <h3 className='buy__buyButton'>Buy</h3>
       </div>
     </main>
   )

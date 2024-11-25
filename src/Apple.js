@@ -1,6 +1,5 @@
 import React from 'react'
 import './mobilephoneList.css'
-import y305G from './images/y305G.png'
 import AppleiPhone15 from './images/AppleiPhone15.png'
 import AppleiPhone16Plus from './images/AppleiPhone16Plus.png'
 import AppleiPhone16Pro from './images/AppleiPhone16Pro.png'

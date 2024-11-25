@@ -8,9 +8,9 @@ const Content = () => {
 
   return (
     <main>
-        <Welcome /> 
-        <Intruduction />
-        <Collections />
+      <Welcome /> 
+      <Intruduction />
+      <Collections />
     </main>
   )
 }
