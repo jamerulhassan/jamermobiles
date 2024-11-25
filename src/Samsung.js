@@ -1,5 +1,4 @@
 import React from 'react'
-import V40e from './images/V40e.png'
 import './mobilephoneList.css'
 import SAMSUNGGalaxyA145G from './images/SAMSUNGGalaxyA145G.png'
 import SAMSUNGGalaxyF05 from './images/SAMSUNGGalaxyF05.png'

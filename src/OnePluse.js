@@ -1,7 +1,5 @@
 import React from 'react'
 import './mobilephoneList.css'
-import y305G from './images/y305G.png'
-import V40e from './images/V40e.png'
 import OnePlusNordCE3Lite5G from './images/OnePlusNordCE3Lite5G.png'
 import OnePlusNordCE4lite5G from './images/OnePlusNordCE4lite5G.png'
 import OnePlusNordCE4 from './images/OnePlusNordCE4.png'

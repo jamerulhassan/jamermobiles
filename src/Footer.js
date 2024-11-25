@@ -1,7 +1,7 @@
 import React from 'react'
 import './footer.css'
 import { FaXTwitter } from "react-icons/fa6";
-import { FaCopyright,FaInstagram,FaFacebook,FaTwitter } from 'react-icons/fa'
+import {FaInstagram,FaFacebook } from 'react-icons/fa'
 const Footer = () => {
     const today=new Date()
   return (

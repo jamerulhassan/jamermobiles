@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import  './introduction.css'
 import DemoPic from './DemoPic'
 import IntroductionContentOne from './IntroductionContentOne'

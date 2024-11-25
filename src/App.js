@@ -24,7 +24,7 @@ function App() {
   const [mobileBattery, setMobileBattery] = useState('');
   const [mobileOs, setMobileOs] = useState('');
   const [mobilePrice, setMobilePrice] = useState('');
-  const [targetElement, setTargetElement] = useState('');
+  
   const handleVisit = (e) => {
     const targetElement = e.target.parentElement.parentElement;
     const image = targetElement.querySelector('img').src;
