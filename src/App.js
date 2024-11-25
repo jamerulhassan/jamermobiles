@@ -35,7 +35,6 @@ function App() {
     const mobileBattery = targetElement.querySelector('figcaption .mobileBattery').textContent;
     const mobileOs = targetElement.querySelector('figcaption .mobileOs').textContent;
     const mobilePrice = targetElement.querySelector('h2.price').textContent;
-    setTargetElement(targetElement);
     setImage(image);
     setMobileName(mobileName);
     setMobileRamRom(mobileRamRom);
