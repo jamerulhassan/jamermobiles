@@ -61,7 +61,6 @@ const handleClosingSideBar=(e)=>{
               >
                 <div className="sideMenu__Div">
                     <h3 className='sideMenu__item home'><Link to="/">Home</Link></h3>
-                    {/* <h3 className='sideMenu__item'><a href='#collection'>Collections</a></h3> */}
                     <h3 className='sideMenu__item brands'>Brands</h3>
                     <div className="sideMenu__Item BrandsNames" style={{display:displayBrandNames}}>
                       <h4><Link to="/vivopage">VIVO</Link></h4>

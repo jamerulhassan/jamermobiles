@@ -28,12 +28,12 @@ function App() {
         const handleVisit = (e) => {
           const targetElement = e.target.parentElement.parentElement;
           const image = targetElement.querySelector('img').src;
-          const mobileName = targetElement.querySelector('figcaption h1').textContent;
-          const mobileRamRom = targetElement.querySelector('figcaption p').textContent;
-          const mobileResolution = targetElement.querySelector('figcaption p:nth-child(3)').textContent;
-          const mobileCamera = targetElement.querySelector('figcaption p:nth-child(4)').textContent;
-          const mobileBattery = targetElement.querySelector('figcaption p:nth-child(5)').textContent;
-          const mobileOs = targetElement.querySelector('figcaption p:nth-child(6)').textContent;
+          const mobileName = targetElement.querySelector('figcaption .nameOfMobile').textContent;
+          const mobileRamRom = targetElement.querySelector('figcaption .mobileRamRom').textContent;
+          const mobileResolution = targetElement.querySelector('figcaption .mobileResolution').textContent;
+          const mobileCamera = targetElement.querySelector('figcaption .mobileCamera').textContent;
+          const mobileBattery = targetElement.querySelector('figcaption .mobileBattery').textContent;
+          const mobileOs = targetElement.querySelector('figcaption .mobileOs').textContent;
           const mobilePrice = targetElement.querySelector('h2.price').textContent;
           setTargetElement(targetElement);
           setImage(image);
@@ -58,111 +58,105 @@ function App() {
         };
   return (
     <div className="App">
-     {/*  <DataProvider> */}
         <Header />
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Content />}/>
-            <Route path="/vivopage">
-              <Route index element={<VivoPage 
-              handleVisit={handleVisit}
-              />}/>
-              <Route path="BuyPage" element={<BuyPage
-              image={image}
-              mobileName={mobileName}
-              mobileRamRom={mobileRamRom}
-              mobileResolution={mobileResolution}
-              mobileCamera={mobileCamera}
-              mobileBattery={mobileBattery}
-              mobileOs={mobileOs}
-              mobilePrice={mobilePrice}
-              />}/>
-            </Route>
-            <Route path="/samsung">
-              <Route index element={<Samsung 
-              handleVisit={handleVisit}
-              />}/>
-              <Route path="BuyPage" element={<BuyPage
-              image={image}
-              mobileName={mobileName}
-              mobileRamRom={mobileRamRom}
-              mobileResolution={mobileResolution}
-              mobileCamera={mobileCamera}
-              mobileBattery={mobileBattery}
-              mobileOs={mobileOs}
-              mobilePrice={mobilePrice}
-              />}/>
-            </Route>
-        
-            <Route path="/realme">
-              <Route index element={<Realme 
-              handleVisit={handleVisit}
-              />}/>
-              <Route path="BuyPage" element={<BuyPage
-              image={image}
-              mobileName={mobileName}
-              mobileRamRom={mobileRamRom}
-              mobileResolution={mobileResolution}
-              mobileCamera={mobileCamera}
-              mobileBattery={mobileBattery}
-              mobileOs={mobileOs}
-              mobilePrice={mobilePrice}
-              />}/>
-            </Route>
-
-            <Route path="/poco">
-              <Route index element={<Poco 
-              handleVisit={handleVisit}
-              />}/>
-              <Route path="BuyPage" element={<BuyPage
-              image={image}
-              mobileName={mobileName}
-              mobileRamRom={mobileRamRom}
-              mobileResolution={mobileResolution}
-              mobileCamera={mobileCamera}
-              mobileBattery={mobileBattery}
-              mobileOs={mobileOs}
-              mobilePrice={mobilePrice}
-              />}/>
-            </Route>
-
-            <Route path="/apple">
-              <Route index element={<Apple
-              handleVisit={handleVisit}
-              />}/>
-              <Route path="BuyPage" element={<BuyPage
-              image={image}
-              mobileName={mobileName}
-              mobileRamRom={mobileRamRom}
-              mobileResolution={mobileResolution}
-              mobileCamera={mobileCamera}
-              mobileBattery={mobileBattery}
-              mobileOs={mobileOs}
-              mobilePrice={mobilePrice}
-              />}/>
-            </Route>
-
-            <Route path="/onePlus">
-              <Route index element={<OnePlus
-              handleVisit={handleVisit}
-              />}/>
-              <Route path="BuyPage" element={<BuyPage
-              image={image}
-              mobileName={mobileName}
-              mobileRamRom={mobileRamRom}
-              mobileResolution={mobileResolution}
-              mobileCamera={mobileCamera}
-              mobileBattery={mobileBattery}
-              mobileOs={mobileOs}
-              mobilePrice={mobilePrice}
-              />}/>
-            </Route>
-            <Route path="/about" element={<About />}/>
-            <Route path="/help" element={<Help />}/>
-            <Route path="*" element={<MissingPage />}/>
+          <Route path="/vivopage">
+            <Route index element={<VivoPage 
+            handleVisit={handleVisit}
+            />}/>
+            <Route path="BuyPage" element={<BuyPage
+            image={image}
+            mobileName={mobileName}
+            mobileRamRom={mobileRamRom}
+            mobileResolution={mobileResolution}
+            mobileCamera={mobileCamera}
+            mobileBattery={mobileBattery}
+            mobileOs={mobileOs}
+            mobilePrice={mobilePrice}
+            />}/>
+          </Route>
+          <Route path="/samsung">
+            <Route index element={<Samsung 
+            handleVisit={handleVisit}
+            />}/>
+            <Route path="BuyPage" element={<BuyPage
+            image={image}
+            mobileName={mobileName}
+            mobileRamRom={mobileRamRom}
+            mobileResolution={mobileResolution}
+            mobileCamera={mobileCamera}
+            mobileBattery={mobileBattery}
+            mobileOs={mobileOs}
+            mobilePrice={mobilePrice}
+            />}/>
+          </Route>
+          <Route path="/realme">
+            <Route index element={<Realme 
+            handleVisit={handleVisit}
+            />}/>
+            <Route path="BuyPage" element={<BuyPage
+            image={image}
+            mobileName={mobileName}
+            mobileRamRom={mobileRamRom}
+            mobileResolution={mobileResolution}
+            mobileCamera={mobileCamera}
+            mobileBattery={mobileBattery}
+            mobileOs={mobileOs}
+            mobilePrice={mobilePrice}
+            />}/>
+          </Route>
+          <Route path="/poco">
+            <Route index element={<Poco 
+            handleVisit={handleVisit}
+            />}/>
+            <Route path="BuyPage" element={<BuyPage
+            image={image}
+            mobileName={mobileName}
+            mobileRamRom={mobileRamRom}
+            mobileResolution={mobileResolution}
+            mobileCamera={mobileCamera}
+            mobileBattery={mobileBattery}
+            mobileOs={mobileOs}
+            mobilePrice={mobilePrice}
+            />}/>
+          </Route>
+          <Route path="/apple">
+            <Route index element={<Apple
+            handleVisit={handleVisit}
+            />}/>
+            <Route path="BuyPage" element={<BuyPage
+            image={image}
+            mobileName={mobileName}
+            mobileRamRom={mobileRamRom}
+            mobileResolution={mobileResolution}
+            mobileCamera={mobileCamera}
+            mobileBattery={mobileBattery}
+            mobileOs={mobileOs}
+            mobilePrice={mobilePrice}
+            />}/>
+          </Route>
+          <Route path="/onePlus">
+            <Route index element={<OnePlus
+            handleVisit={handleVisit}
+            />}/>
+            <Route path="BuyPage" element={<BuyPage
+            image={image}
+            mobileName={mobileName}
+            mobileRamRom={mobileRamRom}
+            mobileResolution={mobileResolution}
+            mobileCamera={mobileCamera}
+            mobileBattery={mobileBattery}
+            mobileOs={mobileOs}
+            mobilePrice={mobilePrice}
+            />}/>
+          </Route>
+          <Route path="/about" element={<About />}/>
+          <Route path="/help" element={<Help />}/>
+          <Route path="*" element={<MissingPage />}/>
         </Routes> 
         <Footer />
-   {/*    </DataProvider> */}
     </div>
   );
 }

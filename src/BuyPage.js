@@ -54,10 +54,3 @@ const BuyPage = () => {
 }
 
 export default BuyPage
-
- {/* <h1>{mobileInformations.mobileName}</h1>
-         <h1>{mobileInformations.mobileRamRom}</h1>
-         <h1>{mobileInformations.mobileResolution}</h1>
-         <h1>{mobileInformations.mobileCamera}</h1>
-         <h1>{mobileInformations.mobileBattery}</h1>
-         <h1>{mobileInformations.mobileOs}</h1> */}

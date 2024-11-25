@@ -13,8 +13,8 @@ const About = () => {
               <img src={jamerul} 
               alt="JAMERUl HASSAN"
               title="JAMERUL HASSAN"
-              width={"100px"}
-              height={"100px"}
+              width="100px"
+              height="100px"
               />
             </figure>
             <figcaption className='About__figcaption'>
