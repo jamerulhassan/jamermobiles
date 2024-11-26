@@ -43,7 +43,7 @@ const Header = () => {
     }
   return (
     <header>
-        <h1 className='header__H1'>JRMobiles</h1>
+        <h1 className='header__H1'><Link to="/">JRMobiles</Link></h1>
         <div className="header__Menu">
             <div className="header__Menu__Line LineOne"style={{transform:menuLineOne}}></div>
             <div className="header__Menu__Line LineTwo"style={{backgroundColor:menuLineTwo}}></div>
