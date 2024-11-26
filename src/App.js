@@ -26,15 +26,42 @@ function App() {
   const [mobilePrice, setMobilePrice] = useState('');
   
   const handleVisit = (e) => {
-    const targetElement = e.target.parentElement.parentElement;
-    const image = targetElement.querySelector('img').src;
-    const mobileName = targetElement.querySelector('figcaption .nameOfMobile').textContent;
-    const mobileRamRom = targetElement.querySelector('figcaption .mobileRamRom').textContent;
-    const mobileResolution = targetElement.querySelector('figcaption .mobileResolution').textContent;
-    const mobileCamera = targetElement.querySelector('figcaption .mobileCamera').textContent;
-    const mobileBattery = targetElement.querySelector('figcaption .mobileBattery').textContent;
-    const mobileOs = targetElement.querySelector('figcaption .mobileOs').textContent;
-    const mobilePrice = targetElement.querySelector('h2.price').textContent;
+    const getTargetedElement=(e)=>{
+      return e.target.parentElement.parentElement
+    }
+    const getImageOfMobile=(targetElement)=>{
+      return targetElement.querySelector('img').src
+    }
+    const getNameOfMobile=(targetElement)=>{
+      return targetElement.querySelector('figcaption .nameOfMobile').textContent
+    }
+    const getRamRomOfMobile=(targetElement)=>{
+      return targetElement.querySelector('figcaption .mobileRamRom').textContent
+    }
+    const getResolutionOfMobile=(targetElement)=>{
+      return targetElement.querySelector('figcaption .mobileResolution').textContent
+    }
+    const getCameraOfMobile=(targetElement)=>{
+      return targetElement.querySelector('figcaption .mobileCamera').textContent
+    }
+    const getBatteryOfMobile=(targetElement)=>{
+      return targetElement.querySelector('figcaption .mobileBattery').textContent
+    }
+    const getOsOfMobile=(targetElement)=>{
+      return targetElement.querySelector('figcaption .mobileOs').textContent
+    }
+    const getPriceOfMobile=(targetElement)=>{
+      return targetElement.querySelector('h2.price').textContent
+    }
+    const targetElement = getTargetedElement(e)
+    const image = getImageOfMobile(targetElement)
+    const mobileName = getNameOfMobile(targetElement)
+    const mobileRamRom = getRamRomOfMobile(targetElement) 
+    const mobileResolution = getResolutionOfMobile(targetElement)
+    const mobileCamera = getCameraOfMobile(targetElement)
+    const mobileBattery = getBatteryOfMobile(targetElement)
+    const mobileOs = getOsOfMobile(targetElement)
+    const mobilePrice = getPriceOfMobile(targetElement)
     setImage(image);
     setMobileName(mobileName);
     setMobileRamRom(mobileRamRom);

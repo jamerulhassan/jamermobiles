@@ -1,6 +1,6 @@
 import React from 'react'
 import './help.css'
-import {FaFacebook, FaInstagram, FaPhone, FaTwitter } from 'react-icons/fa6'
+import {FaFacebook, FaInstagram, FaPhone, FaXTwitter } from 'react-icons/fa6'
 const Help = () => {
   return (
     <main>
@@ -17,7 +17,7 @@ const Help = () => {
                 <div className="content__socialMedia">
                     <FaInstagram size={40}/>
                     <FaFacebook size={40}/>
-                    <FaTwitter size={40}/>
+                    <FaXTwitter size={40}/>
                 </div>
             </div>
             <div className='Help__Content2 content'>
