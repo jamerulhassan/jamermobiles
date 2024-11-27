@@ -30,6 +30,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-weight: bolder;
 }
 .mail *{
     align-self: center;
@@ -60,11 +61,13 @@
     background-color: var(--SIXTHCOLOR);
     padding: 20px;
     border-radius: 5px;
+    overflow: hidden;
 }
 .Help__Content3{
     background-color:var(--FIFTHCOLOR);
     padding: 20px;
     border-radius: 5px;
+    overflow: hidden;
 }
 .Help__Content3 h2,.Help__Content3 p{
     width: 100%;
@@ -73,4 +76,82 @@
 .Help__Content2 h2,.Help__Content2 p{
     width: 100%;
     overflow-wrap: break-word;
+}
+.socialMedia__logo{
+    animation: mediaLogoAnimation2 .4s linear forwards;
+}
+.socialMedia__logo:hover{
+    animation: mediaLogoAnimation1 0.2s linear forwards;
+}
+@keyframes mediaLogoAnimation1 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1) ;
+     }
+     100%{
+        transform: scale(1.2);
+        
+     }
+}
+@keyframes mediaLogoAnimation2 {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg) ;
+     }
+     100%{
+        transform: rotate(360deg);
+        
+     }
+}
+.content2__heading{
+    animation: content2HeadingAnimation 0.4s linear forwards;
+    transform: scale(0);
+    transform-origin: left center;
+}
+@keyframes content2HeadingAnimation{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.content2__p{
+    animation: content2pAnimation 0.4s linear forwards;
+    transform: scale(0);
+    transform-origin: left center;
+}
+@keyframes content2pAnimation{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.content3__all{
+    animation: content3AllAnimation 0.5s linear forwards 0.4s;
+    transform: translateY(-250px);
+    transform-origin: center;
+}
+@keyframes content3AllAnimation{
+    0%{
+        transform: translateY(-250px);
+    }
+    50%{
+        transform: translateY(-125px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }

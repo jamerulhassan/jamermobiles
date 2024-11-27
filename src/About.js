@@ -11,6 +11,7 @@ const About = () => {
           <div className="About">
             <figure className='About__img'>
               <img src={jamerul} 
+              className='img__dev'
               alt="JAMERUl HASSAN"
               title="JAMERUL HASSAN"
               width="100px"
@@ -21,9 +22,9 @@ const About = () => {
               <h1>V Jamerul Hassan</h1>
               <h3>Developer</h3>
               <div className="figcaption__media">
-                <a href="https://www.instagram.com/jame_rul_hassan_/"><FaInstagram size={30}/></a>
-                <a href="https://x.com/jame_rul_hassan?t=DE-FBD7Xq1RhvQsKo5UdBw&s=08"><FaXTwitter size={30}/></a>
-                <a href='mailto:jamerulhassan2k04@gmail.com'><FiMail size={30}/></a>
+                <a href="https://www.instagram.com/jame_rul_hassan_/"><FaInstagram className='media__logo' size={40}/></a>
+                <a href="https://x.com/jame_rul_hassan?t=DE-FBD7Xq1RhvQsKo5UdBw&s=08"><FaXTwitter className='media__logo' size={40}/></a>
+                <a href='mailto:jamerulhassan2k04@gmail.com'><FiMail className='media__logo' size={40}/></a>
               </div>
             </figcaption>
           </div>
@@ -37,10 +38,12 @@ const About = () => {
               <h2 className='msg__H2 msg__h'>
                 What Drives Me
               </h2>
-              <p className='msg__P2 msg__p'>
+              <div className='msg__P2 msg__p'>
+                <p className="P2__content">
                 As a developer, I’m constantly learning and improving my skills. I believe in building products that are not only functional but also provide real value to the people who use them. JamerMobiles is a reflection of my commitment to delivering a great user experience and my passion for both mobile technology and web development. <br />
                 In addition to React, I continue to explore new technologies and stay up-to-date with the latest trends in mobile tech and web development. I’m dedicated to creating the best possible version of JamerMobiles and providing you with the most efficient and enjoyable shopping experience possible.
-            </p>
+                </p>
+            </div>
           </div>
       </section>
     </main>

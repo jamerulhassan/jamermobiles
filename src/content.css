@@ -2,15 +2,8 @@ main{
     display: flex;
     flex-direction: column;
     padding:0px 10px;
+    height: 100%;
 }
 main > *{
     margin: 25px 0px;
 }
-.parallax {
-    background-image: url("./images/parallaxImdOne.jpg");
-    min-height: 50vh;
-    background-attachment: fixed !important;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
