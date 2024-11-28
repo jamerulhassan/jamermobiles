@@ -78,7 +78,7 @@
     overflow-wrap: break-word;
 }
 .socialMedia__logo{
-    animation: mediaLogoAnimation2 .4s linear forwards;
+    animation: mediaLogoAnimation2 .8s linear forwards;
 }
 .socialMedia__logo:hover{
     animation: mediaLogoAnimation1 0.2s linear forwards;

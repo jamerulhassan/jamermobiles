@@ -83,7 +83,7 @@
      }
 }
 .media__logo{
-    animation: mediaLogoAnimation2 .4s linear forwards;
+    animation: mediaLogoAnimation2 .8s linear forwards;
 }
 @keyframes mediaLogoAnimation2 {
     0%{
