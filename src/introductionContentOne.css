@@ -1,36 +1,18 @@
-.introductionDivOne{
-    background-color: var(--BGCOLOR);
-    padding: 25px;
-    border-radius: 25px;
-    color: var(--FC);
-}
-.border{
-    border:1px solid black;
-    border-width: 2px 0px 0px 0px;
-    box-shadow: 1 ;
-    border-radius: 10px;
-    animation: borderOfDemoPicAnimation 0.3s linear forwards 1 0.7s;
-    transform: scaleX(0); 
-}
-@keyframes borderAnimation{
-    0%{
-        transform: scaleX(0);
-    }
-    50%{
-        transform: scaleX(0.5);
-    }
-    100%{
-        transform: scaleX(1);
-    }
-}
 .introduction__content{
+    padding: 25px 10px;
+    background: url('./images/wallpaperTwo.jpeg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
-    gap:10px;
+    height: 50vh;
 }
  .content__company{
+    color: var(--SECONDFC);
+    max-width:600px;
     animation: intrContentAnimation 0.5s linear forwards 1 1.2s ;
     transform-origin: top center;
     transform: translateY(-250px);
@@ -46,14 +28,11 @@
         transform: translateY(0px);
     }
 }
-.content__h2{
-    font-size: clamp(0.8rem, 7vw, 1.7rem);
-    font-family:var(--THIRDFF);
-    font-weight: lighter;
+.content__company h2{
+    font-size: clamp(1.1rem, 8vw, 3.1rem);
+    font-weight: 800;
 }
 .content__p{
-    font-size:clamp(0.5rem, 5vw, 1.5rem);
     line-height: 1.5em;
-    font-family:var(--SECONDFF);
     margin-top: 10px;
 } 

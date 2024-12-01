@@ -1,26 +1,34 @@
 .Disclimer{
-    width: min(90vw,500px);
+    background: url('./images/wallpaperFour.jpg');/*  */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    font-family:var(--SECONDFF);
-    background-color:var(--FIFTHCOLOR);
-    color: var(--SECONDFC);
-    padding: 20px;
-    border-radius: var(--BORDERRADIUS);
-    
+    justify-content: flex-end;
+}
+.Disclimer__Div{
+    padding: 20px 10px;
+    color:var(--FIFTHCOLOR);
+    display: flex;
+    flex-flow: column ;
+    justify-content: flex-end;
+}
+.Disclimer__heading,.Disclimer__content{
+    align-self: flex-end;
 }
 .Disclimer__heading{
-    align-self: center;
-    font-family:var(--THIRDFF);
-    text-align: center;
+    font-size: clamp(1.1rem, 8vw, 3.1rem);
+    font-weight: 800;
 }
 .Disclimer__content{
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-flow: column;
+    gap: 5px;
 }
-.content__para{
-    color:var(--SECONDCOLOR);
+.Disclimer__content *{
+    align-self: flex-end;
+    text-align: end;
+}
+.content__h{
+    color: var(--SECONDFC);
 }

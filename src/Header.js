@@ -9,9 +9,9 @@ const Header = () => {
     const [displayBrandNames,setDisplayBrandNames]=useState('none')
     const handleOpeningSideBar=()=>{
         setDisplay('flex') ;
-        setMenuLineOne("translateY(8px) rotateZ(45deg)");
+        setMenuLineOne("translateY(9.5px) rotateZ(45deg)");
         setMenuLineTwo('transparent');
-        setMenuLineThree("translateY(-8px) rotateZ(-45deg)")
+        setMenuLineThree("translateY(-7px) rotateZ(-45deg)")
     }
     const handleClosingSideBar=(e)=>{
       setDisplay('none')
@@ -43,28 +43,28 @@ const Header = () => {
     }
   return (
     <header>
-        <h1 className='header__H1'><Link to="/">JRMobiles</Link></h1>
+        <p className='header__p'><Link to="/"><span className='p__partOne'>JRM</span>obiles</Link></p>
         <div className="header__Menu">
             <div className="header__Menu__Line LineOne"style={{transform:menuLineOne}}></div>
             <div className="header__Menu__Line LineTwo"style={{backgroundColor:menuLineTwo}}></div>
             <div className="header__Menu__Line LineThree"style={{transform:menuLineThree}}></div>
-            <aside className="header__Menu__SideMenu"style={{display:display}}>
-              <div className="sideMenu__Div">
-                <h3 className='sideMenu__item home'><Link to="/">Home</Link></h3>
-                <h3 className='sideMenu__item brands'>Brands</h3>
-                <div className="sideMenu__Item BrandsNames" style={{display:displayBrandNames}}>
-                  <h4><Link to="/vivopage">VIVO</Link></h4>
-                  <h4><Link to="/samsung">SAMSUNG</Link></h4>
-                  <h4><Link to="/realme">REALME</Link></h4>
-                  <h4><Link to="/poco">POCO</Link></h4>
-                  <h4><Link to="/apple">APPLE</Link></h4>
-                  <h4><Link to="/onePlus">1+plus</Link></h4>
-                </div>
-                <h3 className='sideMenu__item'><Link to="/help">Help</Link></h3>
-                <h3 className='sideMenu__item'><Link to="/about">About</Link></h3>
-              </div>
-            </aside>
         </div>
+        <aside className="header__Menu__SideMenu"style={{display:display}}>
+              <div className="sideMenu__Div">
+                <p className='sideMenu__item home'><Link to="/">Home</Link></p>
+                <p className='sideMenu__item brands'>Brands</p>
+                <div className="sideMenu__Item BrandsNames" style={{display:displayBrandNames}}>
+                  <p><Link to="/vivopage">Vivo</Link></p>
+                  <p><Link to="/samsung">Samsung</Link></p>
+                  <p><Link to="/realme">Realme</Link></p>
+                  <p><Link to="/poco">Poco</Link></p>
+                  <p><Link to="/apple">Apple</Link></p>
+                  <p><Link to="/onePlus">1+plus</Link></p>
+                </div>
+                <p className='sideMenu__item'><Link to="/help">Help</Link></p>
+                <p className='sideMenu__item'><Link to="/about">About</Link></p>
+              </div>
+        </aside>
     </header>
   )
 }

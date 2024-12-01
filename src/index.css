@@ -7,15 +7,13 @@
 }
 :root{
     --BGCOLOR:#ffffff;
-    --FS:clamp(1.0rem,2vw,1.1rem);
-    --FF:"PT Sans", sans-serif;
-    --SECONDFF:"PT Sans", sans-serif;
-    --THIRDFF:"PT Sans", sans-serif;
+    --FS:clamp(1rem, 1.5vw, 3rem);
+    --SECONDFS:clamp(2rem, 8vw, 4rem);
+    --FF:"Source Sans Pro", sans-serif;
     --SECONDCOLOR:black;
     --THIRDCOLOR:#2F4F4F;
     --FOURTHCOLOR: #80817c;
     --BTNCOLOR:#008dfb;
-   
     --SHADOWCOLOR:rgba(193, 186, 193, 0.965);
     --FOOTERBGCOLOR:#10131a;
     --FIFTHCOLOR: orange;
@@ -34,7 +32,14 @@ body{
     font-family: var(--FF);
     font-size: var(--FS);
     color: var(--FC);
-    width: 100%;
+    width: 100%;  
+}
+a{
+    color: var(--FC);
+    text-decoration: none;
+}
+a:hover{
+    cursor: pointer;
 }
 #root{
     display: flex;

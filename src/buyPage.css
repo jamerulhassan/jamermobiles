@@ -6,7 +6,6 @@
     justify-content: space-around;
     gap: 25px;
     margin-top: 20px;
-    /* font-size: clamp(1rem,2vw,1.3rem); */
 }
 .imgAndDetails__figcaption *{
     margin-bottom: 10px;
