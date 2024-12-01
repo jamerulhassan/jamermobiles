@@ -1,5 +1,5 @@
 import React from 'react'
-import './Disclimer.css'
+import './disclaimer.css'
 import { FaCircleInfo } from 'react-icons/fa6'
 import { Parallax } from 'react-scroll-parallax'
 const Disclimer = () => {
