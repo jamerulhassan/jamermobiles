@@ -1,5 +1,112 @@
-main{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+@media all and (min-width:52px){
+    main{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 20px;
+    }
+    .welcome__div{
+        min-height: 100vh;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    .div__content{
+        width: 100%;
+        margin: auto 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:center;
+        align-items: center;
+    }
+    .imgOfCompany{
+        flex-basis: 300px;
+        flex-grow: 1;
+        padding: 60px;
+        align-self: center;
+    }
+    .imgOfCompany figure{
+        height: clamp(60%,60vw,95%);
+        width: clamp(60%,60vw,95%);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+    .imgOfCompany figure img{
+        border-radius: 200px;
+        width: 100%;
+        height: 100%;
+        animation: shopImgAnimation 0.5s linear forwards 0.5s;
+        transform: scale(0)
+    }
+    @keyframes shopImgAnimation{
+        0%{
+            transform: scale(0);
+        }
+        50%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+    .informationDiv{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .information__Content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .informationOne{
+        text-transform: uppercase;
+        font-family: var(--SECONDFF);
+        font-size: var(--THIRDFS);
+        font-weight: 900;
+        text-align: center;
+        overflow-wrap: anywhere;
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+    .navigation{
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        margin-bottom: 50px;
+    }
+    .navigation a{
+        color: var(--FC);
+    }
+
+    .parameter__content{
+        backface-visibility: hidden;
+        width: 100%;
+        height: 100%;
+
+    }
+    .informationOne {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      
+      .informationOne.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .div__content {
+        transform: translateY(0);
+        transition: transform 0.6s ease-out -2s ;
+      }
+      
+      .div__content.animate {
+        transform: translateY(-50px);
+      }
+      .brandDiv{
+        min-height: 100vh;
+      }
 }

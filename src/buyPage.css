@@ -1,115 +1,161 @@
-
-.BuyPage{
-    font-family: var(--FF);
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    gap: 25px;
-    margin-top: 20px;
-}
-.imgAndDetails__figcaption *{
-    margin-bottom: 10px;
-}
-.BuyPage__imgAndDetails{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 10px;
-}
-.imgAndDetails{
-    flex-grow: 1;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: var(--THIRDCOLOR);
-    color: var(--SECONDFC);
-    display: flex;
-    flex-flow: row wrap;
-}
-.imgAndDetails__figure{
-    width:clamp(52px,50vw,300px);
-    background-color: var(--BGCOLOR);
-}
-.imgAndDetails__figcaption{
-    flex-basis:clamp(100px,90vw,500px);
-    background-color: var(--BGCOLOR);
-    color: var(--FC);
-    font-weight: bold;
-    display: flex;
-    flex-flow: column wrap;
-}
-.figcaption__offerHeading{
-    color: #fb641b;
-    margin-top: 20px;
-}
-.off{
-    color: #398e3c;
-}
-.imgAndDetails__notice{
-    background-color: var(--SIXTHCOLOR);
-    flex-grow: 0;
-    flex-basis:clamp(100px,90vw,500px);
-    color: var(--FC);
-}
-.imgAndDetails__notice p{
-    line-height: 1.5rem;
-    color: var(--SECONDFC);
-}
-.notice__h1{
-    align-self: center;
-}
-.imgAndDetails__disclimer{
-    display: flex;
-    flex-flow: column wrap;
-    flex-basis:clamp(100px,90vw,500px);
-    background-color: var(--SECONDCOLOR);
-    color: #fb641b;
-    line-height: 1.2rem;
-    gap: 10px;
-}
-.imgAndDetails__disclimer h2{
-    text-align: center;
-}
-.imgAndDetails__disclimer h2,
-.imgAndDetails__disclimer h3{
-    color: var(--SECONDFC);
-}
-.imgAndDetails__figure img{
-    width: 100%;
-    height: auto;
-}
-
-.imgAndDetails__figure img:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s;
-}
-.BuyPage__buy{
-    width: 90%;
-    align-self: center;
-    color: var(--FC);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 20px;
-}
-.BuyPage__buy *{
-    align-self: center;
-}
-.BuyPage__buy *:hover,.BuyPage__buy *:focus{
-    cursor:pointer;
-    transform: scale(1.05);
-    transition: transform 0.3s;
-}
-.buy__buyButton{
-    background-color: var(--BTNCOLOR);
-    padding: 10px 50px;
-    border-radius: 20px;
-    border: none;
-}
-.buy__buyButton:hover,.buy__buyButton:focus{
-    text-decoration: underline;
-}
-.buy__priceOfPhone{
-    background-color:rgb(255, 149, 0);
-    padding: 8px 40px;
-    border-radius: 20px;
+@media all and (min-width:52px){
+    .BuyPage{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        font-family: var(--SECONDFF);
+        overflow-wrap: anywhere;
+    }
+    .BuyPage__imgAndDetails{
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .imgAndDetails{
+        line-height: clamp(1.3rem,10vw,2.5rem);
+    }
+    .imgAndDetails__figure{
+        padding: 10px 0;
+        width: clamp(70px,90vw,300px);
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .imgAndDetails__figure img{
+        padding: 20px 0;
+        border-radius: 20px;
+        width: 100%;
+        height:100%;
+        background-color: var(--SECONDCOLOR);
+    }
+    .navigationOfImageDetails a{
+        text-align: center;
+        color: var(--FC);
+    }
+    .imgAndDetails__figcaption{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--SECONDFF);
+        gap: 20px;
+    }
+    .phoneDetails,.offers{
+        justify-self: center;
+        flex-basis: 100vh;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+    .imgAndDetails{
+        min-height: 100vh;
+        text-align: center;
+    }
+    .imgAndDetails h1{
+        margin-bottom: 10px;
+    }
+    .iconsOfGift{
+        align-self: center;
+        background-color: var(--SECONDCOLOR);
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .imgAndDetails__notice,.imgAndDetails__disclimer{
+        flex-basis: 60%;
+        text-align: center;
+    }
+    .imgAndDetails__notice,.imgAndDetails__disclimer{
+        margin-top: 50px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .imgAndDetails__notice h1,.imgAndDetails__disclimer h1{
+        font-size: var(--SECONDFS);
+        margin-bottom: 40px;
+    }
+    .BuyPage__buy{
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        text-align: center;
+    }
+    .buy__priceOfPhone,.buy__buyButton{
+        flex-grow: 1;
+        padding: 20px;
+        border-radius: 25px;
+    }
+    .buy__priceOfPhone{
+        background-color: var(--SECONDCOLOR);
+    }
+    .buy__buyButton{
+        background-color: var(--BTNCOLOR);
+    }
+    .buy__buyButton:hover{
+        transform: scale(1.05);
+    }
+    .phoneDetails,.offers{
+        height: 100vh;
+     }
+    .imgAndDetails__figure{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out ;
+     }
+     .imgAndDetails__figure.animate{
+        opacity: 1;
+        transform: translateY(0);
+     }
+     .offers{
+        height: 100vh;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out ;
+     }
+     .offers.animate{
+        opacity: 1;
+        transform: translateY(0);
+     }
+    
+     .allPhoneDetails{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out ;
+     }
+     .allPhoneDetails.animate{
+        opacity: 1;
+        transform: translateY(0);
+     }
+     .imgAndDetails__notice{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out ;
+     }
+     .imgAndDetails__notice.animate{
+        opacity: 1;
+        transform: translateY(0);
+     }
+     .imgAndDetails__disclimer{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out ;
+     }
+     .imgAndDetails__disclimer.animate{
+        opacity: 1;
+        transform: translateY(0);
+     }
+    
 }

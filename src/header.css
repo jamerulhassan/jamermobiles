@@ -1,127 +1,142 @@
+@media all and (min-width:52px){
     header{
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 10px;
         width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items:center;
+        padding: 10px 10px 10px 10px;
+        background-color: var(--BGCOLOR);
         position: sticky;
         top: 0;
+        left: 0;
         z-index: 1;
-        background-color: var(--BGCOLOR);
-        box-shadow: 5px 0px 5px 5px var(--SHADOWCOLOR);
+    }
+    .header__logo{
+        display: flex;
+        flex-basis: clamp(25px,2vw,250px);
+        overflow-wrap: break-word;
     }
     .header__p a{
-        font-size: clamp(2rem,1vw,4rem);
-        font-weight: bold;
+        font-size: var(--LOGOFS);
+        color: var(--FC);
+        font-weight: 600;
     }
     .p__partOne{
         font-weight: bolder;
     }
-    .sideMenu__item a{
-        text-decoration: none;
-        color: var(--FC);
+    .largeMenu{
+        display: none;
+    }
+    .smallMenu{
+        display: flex;
+        position: relative;
+        font-family: var(--SECONDFF);
+    }
+    .smallMenu__item{
+        display: flex;
+        flex-flow: column;
+        flex-grow: 1;
     }
     .header__Menu{
-        
-        display: flex;
+        max-height: 50px;
         align-self: center;
-        flex-direction: column;
-        gap: 3px;
-        padding: 3px;
-        cursor: pointer;
+        justify-content:space-between ;
+        gap: 5px;
+        
     }
     .header__Menu__Line{
-        width:25px;
-        height: 4px;
-        background-color: black;
+        width: 25px;
+        height: 5px;
+        background-color: white;
         border-radius: 5px;
-        transition: transform 0.2s;
-        margin-bottom: 1px;
+       
     }
     .header__Menu__SideMenu{
+        background-color: var(--SECONDBGCOLOR);
+        color: var(--SECONDFC);
         position: absolute;
-        top:100%;
-        right: 0px;
-        display: none;
-        background-color: #fdfbff;
-        padding: 40px 0px 20px 0px;
-        border-radius: 8px 8px 8px 8px;
-        box-shadow: -1px 0px 1px 1px var(--SHADOWCOLOR);
-        transform: translateX(350px);
-        animation: animatSideBar 0.3s linear forwards 1;
-    }
-    @keyframes animatSideBar{
-        0%{
-            transform: translateX(350px);
-        }
-        25%{
-            transform: translateX(250px);
-        }
-        50%{
-            transform: translateX(150px);
-        }
-        75%{
-            transform: translateX(50px);
-        }
-        100%{
-            transform: translateX(0px);
-        }
+        right: 0;
+        top: 130%;
+        
     }
     .sideMenu__Div{
+        padding: 20px 100px 20px 10px;
         display: flex;
-        flex-direction: column;
+        flex-flow: column;
         gap: 20px;
-    }
-    @keyframes closingOfSideBar{
-        0%{
-            transform: scaleX(1);
-        }
-        25%{
-            transform: scaleX(0.75);
-        }
-        50%{
-            transform: scaleX(0.5);
-        }
-        75%{
-            transform: scaleX(0.25);
-        }
-        100%{
-            transform: scaleX(0);
-        }
-    }
-    .sideMenu__Div p{
-        padding: 0px 130px 0px 10px;
-    }
-    .sideMenu__item{
-        cursor: pointer;
-    }
-    .sideMenu__item:hover,
-    .sideMenu__item:focus,.sideMenu__Item p:hover,.sideMenu__Item p:focus{
-        text-decoration: underline;
+       
     }
     .BrandsNames{
-        padding-left: 30px !important; 
-        transform-origin: bottom center;
+        padding-left: 10px;
+        color: var(--SECONDFC);
+        display: flex;
+        flex-flow: column ;
     }
     .BrandsNames p{
         margin-bottom: 10px;
     }
-    .BrandsNames p a{
+    .header__Menu__SideMenu a{
+        color: var(--SECONDFC);
+    }
+}
+@media all and (min-width:550px){
+    header{
+        height: 100%;
+    }
+    .smallMenu{
+        display: none;
+    }
+    .largeMenu{
+        font-family: var(--SECONDFF);
+        display: flex;
+        flex-basis: clamp(300px,50vw,600px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-items: center;
+        position: relative;
+    }
+    .brandsDiv{
+        display: flex;
+        position: relative;
+    }
+    .brandInLargeMenu,.dropDown{
+        display: flex;
+        flex-flow: column;
+    }
+    .dropDown{
+        background-color: var(--SECONDBGCOLOR);
+        position: absolute;
+        top: 130%;
+        padding: 10px 60px 10px 60px;
+        right: -100%;
+        gap: 10px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .largeMenu__item{
+        margin-top: 10px;
+    }
+    .largeMenu__item a{
         color: var(--FC);
-        text-decoration: none;
+        
+    } 
+    .dropDown a{
+        color: var(--SECONDFC);
     }
-@media all and (max-height:400px){
-    .sideMenu__Div{
-        flex-flow: row wrap;
+    .brandInLargeMenu{
+        cursor: pointer;
+        display: flex;
+        flex-flow: row;
+        gap: 5px;
     }
-    .sideMenu__Div p,.sideMenu__Div .sideMenu__Item{
-        padding: 5px;
-        flex-basis: 10px;
+    .largeMenu__item a:active,
+    .largeMenu__item a:hover,.largeMenu__item a:focus,
+    .brandInLargeMenu:hover,.brandInLargeMenu:focus{
+        color:var(--FIRSTCOLOR);
     }
-    .header__Menu__SideMenu{
-        width: 100vw;
-        padding: 10px;
-        transform-origin:top;
-        right: -10px;
-        justify-content:center;
+    .brandInSmallMenu:hover{
+        cursor: pointer;
     }
 }
