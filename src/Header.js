@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './header.css'
-import { FaArrowDown, FaCartArrowDown } from 'react-icons/fa'
+import { FaCartArrowDown } from 'react-icons/fa'
 const Header = () => {
     const [display,setDisplay]=useState('none')
     const [dropDownDisplay,setDropDownDisplay]=useState('none')

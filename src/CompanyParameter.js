@@ -34,11 +34,6 @@ const CompanyParameter = () => {
         if (imgOfStoreOverView.current) observer.observe(imgOfStoreOverView.current);
         if (imgOfproductOfferings.current) observer.observe(imgOfproductOfferings.current);
         if (imgOfPricingandPromotions.current) observer.observe(imgOfPricingandPromotions.current);
-        return () => {
-            if (imgOfStoreOverView.current) observer.unobserve(imgOfStoreOverView.current);
-            if (imgOfproductOfferings.current) observer.unobserve(imgOfproductOfferings.current);
-            if (imgOfPricingandPromotions.current) observer.unobserve(imgOfPricingandPromotions.current);
-        };
     }, []);
 
     return (
