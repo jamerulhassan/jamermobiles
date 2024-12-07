@@ -29,11 +29,7 @@ const Content = () => {
     if (elementToCheckRef.current) {
       observer.observe(elementToCheckRef.current);
     }
-    return () => {
-      if (elementToCheckRef.current) {
-        observer.unobserve(elementToCheckRef.current);
-      }
-    };
+    
   }, []);
   return (
     <main>

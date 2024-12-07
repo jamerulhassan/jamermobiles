@@ -21,9 +21,7 @@ const DisplayPhones = (phoneImageName,phoneName,phoneRamRom,phoneResolution,phon
         }
     );
     if (phoneToCheck.current) observer.observe(phoneToCheck.current);
-    return () => {
-        if (phoneToCheck.current) observer.unobserve(phoneToCheck.current);
-    };
+    
   }, []);
   return (
     < div ref={phoneToCheck} className={`phones ${isPhoneIsVisible ? 'animate' : ''}`}>

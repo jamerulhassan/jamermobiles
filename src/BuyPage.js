@@ -64,26 +64,7 @@ const BuyPage = () => {
       if (BuyPage__buy.current) {
         observer.observe(BuyPage__buy.current);
       }
-      return () => {
-        if (imgAndDetails__figure.current) {
-          observer.unobserve(imgAndDetails__figure.current);
-        }
-        if (phoneDetails.current) {
-            observer.unobserve(phoneDetails.current);
-          }
-          if (offers.current) {
-            observer.unobserve(offers.current);
-          }
-          if (imgAndDetails__notice.current) {
-            observer.unobserve(imgAndDetails__notice.current);
-          }
-          if (imgAndDetails__disclimer.current) {
-            observer.unobserve(imgAndDetails__disclimer.current);
-          }
-          if (BuyPage__buy.current) {
-            observer.unobserve(BuyPage__buy.current);
-          }
-      };
+      
     }, []);
   return (
     <main>

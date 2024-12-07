@@ -42,17 +42,7 @@ const About = () => {
       if (msgTwo.current) {
         observer.observe(msgTwo.current);
       }
-      return () => {
-        if (About.current) {
-          observer.unobserve(About.current);
-        }
-        if (msgOne.current) {
-            observer.unobserve(msgOne.current);
-          }
-          if (msgTwo.current) {
-            observer.unobserve(msgTwo.current);
-          }
-      };
+      
     }, []);
   return (
     <main>

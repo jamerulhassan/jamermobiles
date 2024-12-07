@@ -71,29 +71,7 @@ const BrandList = () => {
       if (onePlus__caption__p.current) {
         observer.observe(onePlus__caption__p.current);
       }
-      return () => {
-        if (Collections__heading.current) {
-          observer.unobserve(Collections__heading.current);
-        }
-        if (vivo__caption__p.current) {
-            observer.unobserve(vivo__caption__p.current);
-          }
-          if (samsung__caption__p.current) {
-            observer.unobserve(samsung__caption__p.current);
-          }
-          if (realme__caption__p.current) {
-            observer.unobserve(realme__caption__p.current);
-          }
-          if (poco__caption__p.current) {
-            observer.unobserve(poco__caption__p.current);
-          }
-          if (apple__caption__p.current) {
-            observer.unobserve(apple__caption__p.current);
-          }
-          if (onePlus__caption__p.current) {
-            observer.unobserve(onePlus__caption__p.current);
-          }
-      };
+      
     }, []);
   return (
          <div className="Collections">

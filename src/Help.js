@@ -55,23 +55,7 @@ const Help = () => {
       if (socialmedia.current) {
         observer.observe(socialmedia.current);
       }
-      return () => {
-        if (slogan.current) {
-          observer.unobserve(slogan.current);
-        }
-        if (contact__slogan.current) {
-            observer.unobserve(contact__slogan.current);
-          }
-          if (contact__ways.current) {
-            observer.unobserve(contact__ways.current);
-          }
-          if (socialmedia__slogan.current) {
-            observer.unobserve(socialmedia__slogan.current);
-          }
-          if (socialmedia.current) {
-            observer.unobserve(socialmedia.current);
-          }
-      };
+     
     }, []);
   return (
     <main>
