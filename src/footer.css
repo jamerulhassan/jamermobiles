@@ -18,7 +18,7 @@
         margin-bottom: 5px;
     }
     .content__title{
-        color: var(--SECONDFC);
+        color: var(--FC);
         border: 2px solid orange;
         border-width: 0 0 2px 0;
      }
