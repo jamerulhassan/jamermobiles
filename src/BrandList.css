@@ -55,7 +55,7 @@
         display: flex;
         position: relative;
         transform-style: preserve-3d;
-        transition: transform .5s 0.3s;
+        transition: transform .5s 0.7s;
         /* overflow-y: hidden; */
     }
     .card{
@@ -109,7 +109,7 @@
     .items__group:hover{
         transform: rotateY(-180deg);
     }
-    .vivo__caption__p.animate,
+/*     .vivo__caption__p.animate,
     .samsung__caption__p.animate,
     .realme__caption__p.animate,
     .poco__caption__p.animate,
@@ -147,5 +147,17 @@
         opacity: 0;
         transform: translateY(10px);
         transition: opacity 0.6s ease-out 0.6s, transform 0.6s ease-out 0.6s;
+    } */
+ 
+  .mobile_caption_p.animate{
+        opacity: 1;
+        transform: translateY(0);
     }
+    .mobile_caption_p{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.3s ease-out 0.3s, transform 0.3s ease-out 0.3s;
+    }
+
+    
 }
