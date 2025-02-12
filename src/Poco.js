@@ -18,33 +18,25 @@ const Poco = ({handleVisit}) => {
   const pocoPhoneSix=DisplayPhones(POCOC55,"POCO C55","6 GB RAM | 128 GB ROM | Expandable Upto 1 TB","17.04 cm (6.71 inch) HD+ Display","50MP Dual Rear Camera | 5MP Front Camera","5000 mAh Battery","Mediatek Helio G85 Processor","10,999",handleVisit)
   const pocoPhoneSeven=DisplayPhones(POCOX3Pro,"POCO X3 Pro","6 GB RAM | 128 GB ROM | Expandable Upto 1 TB","16.94 cm (6.67 inch) Full HD+ Display","48MP + 8MP + 2MP + 2MP | 20MP Front Camera","5160 mAh Lithium-ion Polymer Battery","Qualcomm Snapdragon 860 Processor","11,999",handleVisit)
   const pocoPhoneEigth=DisplayPhones(POCOC51,"POCO C51","4 GB RAM | 64 GB ROM | Expandable Upto 1 TB","16.56 cm (6.52 inch) HD+ Display","8MP Dual Rear Camera | 5MP Front Camera","5000 mAh Battery","Helio G36 Processor","9,999",handleVisit)
+  const pocoPhones=[
+    {id:1,phone:pocoPhoneOne},
+    {id:2,phone:pocoPhoneTwo},
+    {id:3,phone:pocoPhoneThree},
+    {id:4,phone:pocoPhoneFour},
+    {id:5,phone:pocoPhoneFive},
+    {id:6,phone:pocoPhoneSix},
+    {id:7,phone:pocoPhoneSeven},
+    {id:8,phone:pocoPhoneEigth}]
   return (
     <main>
       <section>
-          <div className="MobilePhoneList__mobile mobile1">
-            {pocoPhoneOne}
+        {
+          pocoPhones.map(phone=>(
+            <div className="MobilePhoneList__mobile mobile1" >
+            {phone.phone}
           </div>
-          <div className="MobilePhoneList__mobile mobile2">
-            {pocoPhoneTwo}
-          </div>
-          <div className="MobilePhoneList__mobile mobile3">
-            {pocoPhoneThree}
-          </div>
-          <div className="MobilePhoneList__mobile mobile4">
-            {pocoPhoneFour}
-          </div>
-          <div className="MobilePhoneList__mobile mobile5">
-            {pocoPhoneFive}
-          </div>
-          <div className="MobilePhoneList__mobile mobile6">
-            {pocoPhoneSix}
-          </div>
-          <div className="MobilePhoneList__mobile mobile7">
-            {pocoPhoneSeven}
-          </div>
-          <div className="MobilePhoneList__mobile mobile8">
-            {pocoPhoneEigth}
-          </div>
+          ))
+        }
       </section>
     </main>
   )

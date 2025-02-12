@@ -18,33 +18,25 @@ const VivoPage = ({handleVisit}) => {
   const vivoPhoneSix=DisplayPhones(vivoT3Lite5G,"vivo T3 Lite 5G","6 GB RAM | 128 GB ROM | Expandable Upto 1 TB","16.66 cm (6.56 inch) Display","50MP + 2MP | 8MP Front Camera","5000 mAh Battery","Dimensity 6300 Processor","15,499",handleVisit)
   const vivoPhoneSeven=DisplayPhones(vivoT3Pro5G,"vivo T3 Pro 5G","8 GB RAM | 128 GB ROM","17.2 cm (6.77 inch) Full HD+ AMOLED Display","50MP + 8MP | 16MP Front Camera","5500 mAh Battery","Snapdragon 7 Gen 3 Processor","24,999",handleVisit)
   const vivoPhoneEigth=DisplayPhones(vivoY100A,"vivo Y100A","8 GB RAM | 256 GB ROM","16.21 cm (6.38 inch) Full HD+ Display","64MP + 2MP + 2MP | 16MP Front Camera","4500 mAh battery","Snapdragon 695 Processor","23,999",handleVisit)
+  const vivoPhones=[
+    {id:1,phone:vivoPhoneOne},
+    {id:2,phone:vivoPhoneTwo},
+    {id:3,phone:vivoPhoneThree},
+    {id:4,phone:vivoPhoneFour},
+    {id:5,phone:vivoPhoneFive},
+    {id:6,phone:vivoPhoneSix},
+    {id:7,phone:vivoPhoneSeven},
+    {id:8,phone:vivoPhoneEigth}]
   return (
     <main>
         <section className="MobilePhoneList">
-        <div className="MobilePhoneList__mobile mobile1">
-          {vivoPhoneOne}
-        </div>
-        <div className="MobilePhoneList__mobile mobile2">
-          {vivoPhoneTwo}
-        </div>
-        <div className="MobilePhoneList__mobile mobile3">
-          {vivoPhoneThree}
-        </div>
-        <div className="MobilePhoneList__mobile mobile4">
-          {vivoPhoneFour}
-        </div>
-        <div className="MobilePhoneList__mobile mobile5">
-          {vivoPhoneFive}
-        </div>
-        <div className="MobilePhoneList__mobile mobile6">
-          {vivoPhoneSix}
-        </div>
-        <div className="MobilePhoneList__mobile mobile7">
-          {vivoPhoneSeven}
-        </div>
-        <div className="MobilePhoneList__mobile mobile8">
-          {vivoPhoneEigth}
-        </div>
+        {
+          vivoPhones.map(phone=>(
+            <div className="MobilePhoneList__mobile mobile1" >
+            {phone.phone}
+          </div>
+          ))
+        }
         </section>  
     </main>
   )

@@ -18,33 +18,25 @@ const Samsung = ({handleVisit}) => {
   const samsungPhoneSix=DisplayPhones(SAMSUNGGalaxyM355G,"SAMSUNG Galaxy M35 5G","6 GB RAM | 128 GB ROM","16.76 cm (6.6 inch) Display","50MP Rear Camera","6000 mAh Battery","Exynos 1380,Android 14","16,383",handleVisit)
   const samsungPhoneSeven=DisplayPhones(SAMSUNGGalaxyA545G,"SAMSUNG Galaxy A54 5G","8 GB RAM | 256 GB ROM | Expandable Upto 1 TB","16.26 cm (6.4 inch) Full HD+ Display","50MP + 12MP + 5MP | 32MP Front Camera","5000 mAh Battery","Exynos 1380, Octa Core Processor","37,499",handleVisit)
   const samsungPhoneEigth=DisplayPhones(SAMSUNGGalaxyA155G,"SAMSUNG Galaxy A15 5G","8 GB RAM | 128 GB ROM | Expandable Upto 1 TB","16.51 cm (6.5 inch) Full HD+ Display","50MP + 5MP + 2MP | 13MP Front Camera","5000 mAh Battery","Dimensity 6100+ Processor","16,990",handleVisit)
+  const samsungPhones=[
+    {id:1,phone:samsungPhoneOne},
+    {id:2,phone:samsungPhoneTwo},
+    {id:3,phone:samsungPhoneThree},
+    {id:4,phone:samsungPhoneFour},
+    {id:5,phone:samsungPhoneFive},
+    {id:6,phone:samsungPhoneSix},
+    {id:7,phone:samsungPhoneSeven},
+    {id:8,phone:samsungPhoneEigth}]
   return (
     <main>
         <section className="MobilePhoneList">
-          <div className="MobilePhoneList__mobile mobile1">
-            {samsungPhoneOne}
+        {
+          samsungPhones.map(phone=>(
+            <div className="MobilePhoneList__mobile mobile1" >
+            {phone.phone}
           </div>
-          <div className="MobilePhoneList__mobile mobile2">
-            {samsungPhoneTwo}
-          </div>
-          <div className="MobilePhoneList__mobile mobile3">
-            {samsungPhoneThree}
-          </div>
-          <div className="MobilePhoneList__mobile mobile4">
-            {samsungPhoneFour}
-          </div>
-          <div className="MobilePhoneList__mobile mobile5">
-            {samsungPhoneFive}
-          </div>
-          <div className="MobilePhoneList__mobile mobile6">
-            {samsungPhoneSix}
-          </div>
-          <div className="MobilePhoneList__mobile mobile7">
-            {samsungPhoneSeven}
-          </div>
-          <div className="MobilePhoneList__mobile mobile8">
-            {samsungPhoneEigth}
-          </div>
+          ))
+        }
         </section>  
     </main>
   )

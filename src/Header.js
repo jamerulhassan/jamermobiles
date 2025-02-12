@@ -79,18 +79,18 @@ const Header = () => {
           </div>
           <aside className="header__Menu__SideMenu smallMenu__item"style={{display:display}}>
                 <div className="sideMenu__Div">
-                  <p className='sideMenu__item home'><Link to="/">Home</Link></p>
+                <Link to="/"><p className='sideMenu__item home'>Home</p></Link>
                   <p className='sideMenu__item brandInSmallMenu'>Brands</p>
                   <div className="sideMenu__Item BrandsNames" style={{display:displayBrandNames}}>
-                    <p><Link to="/vivopage">Vivo</Link></p>
-                    <p><Link to="/samsung">Samsung</Link></p>
-                    <p><Link to="/realme">Realme</Link></p>
-                    <p><Link to="/poco">Poco</Link></p>
-                    <p><Link to="/apple">Apple</Link></p>
-                    <p><Link to="/onePlus">1+plus</Link></p>
+                  <Link to="/vivopage"><p>Vivo</p></Link>
+                    <Link to="/samsung"><p>Samsung</p></Link>
+                    <Link to="/realme"><p>Realme</p></Link>
+                    <Link to="/poco"><p>Poco</p></Link>
+                    <Link to="/apple"><p>Apple</p></Link>
+                    <Link to="/onePlus"><p>1+plus</p></Link>
                   </div>
-                  <p className='sideMenu__item'><Link to="/help">Help</Link></p>
-                  <p className='sideMenu__item'><Link to="/about">About</Link></p>
+                  <Link to="/help"><p className='sideMenu__item'>Help</p></Link>
+                  <Link to="/about"><p className='sideMenu__item'>About</p></Link>
                 </div>
           </aside>
         </div>

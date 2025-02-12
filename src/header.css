@@ -61,11 +61,16 @@
         
     }
     .sideMenu__Div{
-        padding: 20px 100px 20px 10px;
+        padding: 20px 0px 20px 10px;
         display: flex;
         flex-flow: column;
         gap: 20px;
-       
+    }
+    .sideMenu__item{
+        padding-right: 100px;
+    }
+    .sideMenu__item a{
+        min-width: 100%;
     }
     .BrandsNames{
         padding-left: 10px;
@@ -118,10 +123,12 @@
     .largeMenu__item{
         margin-top: 10px;
     }
+    .largeMenu__item p{
+       /*  padding: 0px 60px 0px 60px; */
+    }
     .largeMenu__item a{
         color: var(--FC);
-        
-    } 
+    }
     .dropDown a{
         color: var(--SECONDFC);
     }

@@ -157,5 +157,8 @@
         opacity: 1;
         transform: translateY(0);
      }
+     .buy__buyButton:hover{
+        cursor: pointer;
+     }
     
 }
