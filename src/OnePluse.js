@@ -1,15 +1,7 @@
 import React from 'react'
 import './mobilephoneList.css'
 import { useEffect, useState } from 'react'
-import DisplayPhones from './DisplayPhones'
-import OnePlusNordCE3Lite5G from './images/OnePlusNordCE3Lite5G.png'
-import OnePlusNordCE4lite5G from './images/OnePlusNordCE4lite5G.png'
-import OnePlusNordCE4 from './images/OnePlusNordCE4.png'
-import OnePlus12R from './images/OnePlus12R.png'
-import OnePlusNord35G from './images/OnePlusNord35G.png'
-import OnePlusNordCE2Lite5G from './images/OnePlusNordCE2Lite5G.png'
-import OnePlus11R5G from './images/OnePlus11R5G.png'
-import OnePlus12 from './images/OnePlus12.png'
+import DisplayPhones from './displayPhones'
 const OnePlus = ({handleVisit}) => {
     const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/onePlus'
     const [onePlusMobiles, setonePlusMobiles] = useState([])

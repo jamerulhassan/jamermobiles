@@ -1,15 +1,7 @@
 import React from 'react'
 import './mobilephoneList.css'
 import { useEffect, useState } from 'react'
-import DisplayPhones from './DisplayPhones'
-import AppleiPhone15 from './images/AppleiPhone15.png'
-import AppleiPhone16Plus from './images/AppleiPhone16Plus.png'
-import AppleiPhone16Pro from './images/AppleiPhone16Pro.png'
-import AppleiPhone16 from './images/AppleiPhone16.png'
-import AppleiPhone15Plus from './images/AppleiPhone15Plus.png'
-import AppleiPhone15ProMax from './images/AppleiPhone15ProMax.png'
-import AppleiPhone15Pro from './images/AppleiPhone15Pro.png'
-import AppleiPhone12 from './images/AppleiPhone12.png'
+import DisplayPhones from './displayPhones'
 const Apple = ({handleVisit}) => {
   const API_URL='https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/apple';
 

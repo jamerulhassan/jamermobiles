@@ -1,15 +1,7 @@
 import React from 'react'
 import './mobilephoneList.css'
 import { useEffect, useState } from 'react'
-import DisplayPhones from './DisplayPhones'
-import POCOM65G from './images/POCOM65G.png'
-import POCOC65 from './images/POCOC65.png'
-import POCOC61 from './images/POCOC61.png'
-import POCOX6Neo5G from './images/POCOX6Neo5G.png'
-import POCOF65G from './images/POCOF65G.png'
-import POCOC55 from './images/POCOC55.png'
-import POCOX3Pro from './images/POCOX3Pro.png'
-import POCOC51 from './images/POCOC51.png'
+import DisplayPhones from './displayPhones'
 const Poco = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/poco'
     const [pocoMobiles, setpocoMobiles] = useState([])

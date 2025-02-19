@@ -1,15 +1,7 @@
 import React from 'react'
 import './mobilephoneList.css'
 import  { useEffect, useState } from 'react'
-import DisplayPhones from './DisplayPhones'
-import SAMSUNGGalaxyA145G from './images/SAMSUNGGalaxyA145G.png'
-import SAMSUNGGalaxyF05 from './images/SAMSUNGGalaxyF05.png'
-import SAMSUNGGalaxyS23FE from './images/SAMSUNGGalaxyS23FE.png'
-import SAMSUNGM05 from './images/SAMSUNGM05.png'
-import SAMSUNGGalaxyS245G from './images/SAMSUNGGalaxyS245G.png'
-import SAMSUNGGalaxyM355G from './images/SAMSUNGGalaxyM355G.png'
-import SAMSUNGGalaxyA545G from './images/SAMSUNGGalaxyA545G.png'
-import SAMSUNGGalaxyA155G from './images/SAMSUNGGalaxyA155G.png'
+import DisplayPhones from './displayPhones'
 const Samsung = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/samsung'
     const [samsungMobiles, setsamsungMobiles] = useState([])

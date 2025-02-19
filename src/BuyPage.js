@@ -5,7 +5,6 @@ import { useState,useEffect,useRef } from 'react'
 import Disclimer from './Disclimer'
 import Notice from './Notice'
 import Offers from './Offers'
-import { useParams } from 'react-router-dom'
 const BuyPage = ({individualData,isLoading,fetchError}) => {
   
   const imgAndDetails__figure = useRef(null);

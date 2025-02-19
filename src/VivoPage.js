@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './mobilephoneList.css'
-import y305G from './images/y305G.png'
-import vivoV40e from './images/vivoV40e.png'
-import vivoX100pro from './images/vivoX100pro.png'
-import vivoY300plus5g from './images/vivoY300plus5g.png'
-import vivoY18i from './images/vivoY18i.png'
-import vivoT3Lite5G from './images/vivoT3Lite5G.png'
-import vivoT3Pro5G from './images/vivoT3Pro5G.png'
-import vivoY100A from './images/vivoY100A.png'
-import DisplayPhones from './DisplayPhones'
+import DisplayPhones from './displayPhones'
 const VivoPage = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/vivo';
   const [vivoMobiles, setVivoMobiles] = useState([])
