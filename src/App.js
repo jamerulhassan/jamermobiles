@@ -14,7 +14,7 @@ import About from "./About";
 import Help from "./Help";
 import MissingPage from "./MissingPage";
 import ScrollToTop from "./ScrollToTop";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 function App() {
   const [individualData,setIndividualData] = useState({})
   const [isLoading, setIsLoading] = useState(true)
