@@ -14,10 +14,76 @@ import About from "./About";
 import Help from "./Help";
 import MissingPage from "./MissingPage";
 import ScrollToTop from "./ScrollToTop";
+import { useEffect, useState } from "react";
 function App() {
+  const [individualData,setIndividualData] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
+  const [fetchError, setFetchError] = useState(null)
+  const handleVisit = async (API_URL,individual) => {
+      try{
+        const response = await fetch(`${API_URL}/${individual}`);
+        const data = await response.json();  
+        setIndividualData(data.fields)
+        setFetchError(null)
+      }catch(err){
+        setFetchError(err.message)
+        console.log(err.message);
+      }finally{
+        setIsLoading(false);
+      }
+    }
+  return (
+    <div className="App">
+      <Header />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Content />}/>
+        <Route path="/vivopage">
+          <Route index element={<VivoPage handleVisit={handleVisit}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+        </Route>
+        <Route path="/samsung">
+          <Route index element={<Samsung handleVisit={handleVisit}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+        </Route>
+        <Route path="/realme">
+          <Route index element={<Realme handleVisit={handleVisit}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+        </Route>
+        <Route path="/poco">
+          <Route index element={<Poco handleVisit={handleVisit}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+        </Route>
+        <Route path="/apple">
+          <Route index element={<Apple handleVisit={handleVisit}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+        </Route>
+        <Route path="/onePlus">
+          <Route index element={<OnePlus handleVisit={handleVisit}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+        </Route>
+        <Route path="/about" element={<About />}/>
+        <Route path="/help" element={<Help />}/>
+        <Route path="*" element={<MissingPage />}/>
+      </Routes> 
+      <Footer />
+    </div>
+  );
+}
 
-  const handleVisit = (e) => {
-    const getTargetedElement=(e)=>{
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+/* const getTargetedElement=(e)=>{
       return e.target.parentElement.parentElement
     }
     const getImageOfMobile=(targetElement)=>{
@@ -62,46 +128,4 @@ function App() {
       mobileBattery:mobileBattery,
       mobileOs:mobileOs,
       mobilePrice:mobilePrice
-    };  
-    localStorage.setItem("mySessionStorage",JSON.stringify(mobile))
-  };
-  return (
-    <div className="App">
-      <Header />
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Content />}/>
-        <Route path="/vivopage">
-          <Route index element={<VivoPage handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage />}/>
-        </Route>
-        <Route path="/samsung">
-          <Route index element={<Samsung handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage />}/>
-        </Route>
-        <Route path="/realme">
-          <Route index element={<Realme handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage />}/>
-        </Route>
-        <Route path="/poco">
-          <Route index element={<Poco handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage />}/>
-        </Route>
-        <Route path="/apple">
-          <Route index element={<Apple handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage />}/>
-        </Route>
-        <Route path="/onePlus">
-          <Route index element={<OnePlus handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage />}/>
-        </Route>
-        <Route path="/about" element={<About />}/>
-        <Route path="/help" element={<Help />}/>
-        <Route path="*" element={<MissingPage />}/>
-      </Routes> 
-      <Footer />
-    </div>
-  );
-}
-
-export default App;
+    }; /* localStorage.setItem("mySessionStorage",JSON.stringify(mobile)) */ 

@@ -64,5 +64,8 @@
     .nameOfMobile{
         margin-bottom: 10px;
     }
-    
+    .loading{
+        text-align: center;
+        font-size: 30px;
+    }
 }

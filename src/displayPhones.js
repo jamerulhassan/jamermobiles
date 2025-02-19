@@ -1,50 +1,53 @@
-import React, { useRef, useState } from 'react'
-import { useEffect } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-const DisplayPhones = (phoneImageName,phoneName,phoneRamRom,phoneResolution,phoneCamera,phoneBattery,phoneProcessor,phonePrice,handleVisit) => {
-  const phoneToCheck=useRef(null)
-  const [isPhoneIsVisible,setIsPhoneIsVisible]=useState(false)
+const DisplayPhones = ({ mobile, handleVisit ,API_URL,individual}) => {
+  const phoneToCheck = useRef(null);
+  const [isPhoneIsVisible, setIsPhoneIsVisible] = useState(false);  
   useEffect(() => {
     const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting){
-                  setIsPhoneIsVisible(true)
-                }
-                else{
-                  setIsPhoneIsVisible(false)
-                }
-            });
-        },
-        {
-            threshold: 0.5,
-        }
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsPhoneIsVisible(true);
+          } else {
+            setIsPhoneIsVisible(false);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
     );
     if (phoneToCheck.current) observer.observe(phoneToCheck.current);
-    
   }, []);
+  const getFieldValue = (fieldName) => {
+    return mobile?.[fieldName]?.stringValue || 'N/A';
+  };
   return (
-    < div ref={phoneToCheck} className={`phones ${isPhoneIsVisible ? 'animate' : ''}`}>
-              <figure className='mobile__figure figure1'>
-                <img src={phoneImageName} 
-                alt="phoneImageName"
-                title="phoneImageName"
-                width='200px'
-                height='200px'
-                />
-              </figure>
-              <figcaption className='mobile__figurecaption figurecaption'>
-                <h1 className='nameOfMobile'>{phoneName}</h1>
-                <p className='mobileRamRom'>{phoneRamRom}</p>
-                <p className='mobileResolution'>{phoneResolution}</p>
-                <p className='mobileCamera'>{phoneCamera}</p>
-                <p className='mobileBattery'>{phoneBattery}</p>
-                <p className='mobileOs'>{phoneProcessor}</p>
-              </figcaption>
-              <h2 className='price'>Rs. {phonePrice}</h2>
-              <h2 className='visit' onClick={(e)=>{handleVisit(e)}}><Link to="BuyPage" >visit</Link></h2>
+    <div  ref={phoneToCheck} className={`phones ${isPhoneIsVisible ? 'animate' : ''}`}>
+      <figure className="mobile__figure figure1">
+        <img
+          src={getFieldValue('mobileImage')}
+          alt={getFieldValue('mobileName')}
+          title={getFieldValue('mobileName')}
+          width="200px"
+          height="200px"
+        />
+      </figure>
+      <figcaption className="mobile__figurecaption figurecaption">
+        <h1 className="nameOfMobile">{getFieldValue('mobileName')}</h1>
+        <p className="mobileRamRom">{getFieldValue('mobileRamRom')}</p>
+        <p className="mobileResolution">{getFieldValue('mobileResolution')}</p>
+        <p className="mobileCamera">{getFieldValue('mobileCamera')}</p>
+        <p className="mobileBattery">{getFieldValue('mobileBattery')}</p>
+        <p className="mobileOs">{getFieldValue('mobileOs')}</p>
+      </figcaption>
+      <h2 className="price">{getFieldValue('mobilePrice')}</h2>
+      <h2 className="visit" onClick={(e) => handleVisit(API_URL,individual)}>
+        <Link to="BuyPage">Visit</Link>
+      </h2>
     </div>
-  )
+  );
 }
 
-export default DisplayPhones
+export default DisplayPhones;
