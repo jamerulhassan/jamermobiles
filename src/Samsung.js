@@ -1,7 +1,7 @@
 import React from 'react'
 import './mobilephoneList.css'
 import  { useEffect, useState } from 'react'
-import DisplayPhones from './DisplayPhones'
+import DisplayPhones from './displayPhones'
 const Samsung = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/samsung'
     const [samsungMobiles, setsamsungMobiles] = useState([])
@@ -32,11 +32,9 @@ const Samsung = ({handleVisit}) => {
                 samsungMobiles.map((mobile)=>(
                   <DisplayPhones 
                   key={mobile.name} 
-                  individual={mobile.name.split('/').pop()}
                   mobile={mobile.fields} 
                   handleVisit={handleVisit}
-                  API_URL={API_URL}
-                  samsungMobiles={samsungMobiles}/>
+                  />
                 ))
               }
           </section>  

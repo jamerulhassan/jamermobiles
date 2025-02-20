@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-const DisplayPhones = ({ mobile, handleVisit ,API_URL,individual}) => {
+const DisplayPhones = ({ mobile, handleVisit}) => {
   const phoneToCheck = useRef(null);
   const [isPhoneIsVisible, setIsPhoneIsVisible] = useState(false);  
   useEffect(() => {

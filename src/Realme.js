@@ -1,7 +1,7 @@
 import React from 'react'
 import './mobilephoneList.css'
 import  { useEffect, useState } from 'react'
-import DisplayPhones from './DisplayPhones'
+import DisplayPhones from './displayPhones'
 const Realme = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/realme'
     const [realmeMobiles, setrealmeMobiles] = useState([])
@@ -32,11 +32,9 @@ const Realme = ({handleVisit}) => {
                 realmeMobiles.map((mobile)=>(
                   <DisplayPhones 
                   key={mobile.name} 
-                  individual={mobile.name.split('/').pop()}
                   mobile={mobile.fields} 
                   handleVisit={handleVisit}
-                  API_URL={API_URL}
-                  realmeMobiles={realmeMobiles}/>
+                  />
                 ))
               }
           </section>  
