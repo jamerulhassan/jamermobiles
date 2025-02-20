@@ -17,20 +17,8 @@ import ScrollToTop from "./ScrollToTop";
 import { useState } from "react";
 function App() {
   const [individualData,setIndividualData] = useState({})
-  const [isLoading, setIsLoading] = useState(true)
-  const [fetchError, setFetchError] = useState(null)
-  const handleVisit = async (API_URL,individual) => {
-      try{
-        const response = await fetch(`${API_URL}/${individual}`);
-        const data = await response.json();  
-        setIndividualData(data.fields)
-        setFetchError(null)
-      }catch(err){
-        setFetchError(err.message)
-        console.log(err.message);
-      }finally{
-        setIsLoading(false);
-      }
+  const handleVisit=(mobile) => { 
+        setIndividualData(mobile)      
     }
   return (
     <div className="App">
@@ -40,27 +28,27 @@ function App() {
         <Route path="/" element={<Content />}/>
         <Route path="/vivopage">
           <Route index element={<VivoPage handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} />}/>
         </Route>
         <Route path="/samsung">
           <Route index element={<Samsung handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} />}/>
         </Route>
         <Route path="/realme">
           <Route index element={<Realme handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} />}/>
         </Route>
         <Route path="/poco">
           <Route index element={<Poco handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} />}/>
         </Route>
         <Route path="/apple">
           <Route index element={<Apple handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} />}/>
         </Route>
         <Route path="/onePlus">
           <Route index element={<OnePlus handleVisit={handleVisit}/>}/>
-          <Route path="BuyPage" element={<BuyPage individualData={individualData} isLoading={isLoading} fetchError={fetchError}/>}/>
+          <Route path="BuyPage" element={<BuyPage individualData={individualData} />}/>
         </Route>
         <Route path="/about" element={<About />}/>
         <Route path="/help" element={<Help />}/>

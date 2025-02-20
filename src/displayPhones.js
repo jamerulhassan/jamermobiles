@@ -43,7 +43,7 @@ const DisplayPhones = ({ mobile, handleVisit ,API_URL,individual}) => {
         <p className="mobileOs">{getFieldValue('mobileOs')}</p>
       </figcaption>
       <h2 className="price">{getFieldValue('mobilePrice')}</h2>
-      <h2 className="visit" onClick={(e) => handleVisit(API_URL,individual)}>
+      <h2 className="visit" onClick={(e) => handleVisit(mobile)}>
         <Link to="BuyPage">Visit</Link>
       </h2>
     </div>

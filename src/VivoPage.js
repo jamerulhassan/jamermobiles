@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './mobilephoneList.css'
-import DisplayPhones from './displayPhones'
+import DisplayPhones from './DisplayPhones'
 const VivoPage = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/vivo';
   const [vivoMobiles, setVivoMobiles] = useState([])
@@ -13,7 +13,6 @@ const VivoPage = ({handleVisit}) => {
         const response = await fetch(API_URL);
         const data = await response.json();
         console.log(data.documents);
-        
         setVivoMobiles(data.documents)
         setFetchError(null)
       } catch (error) {
@@ -38,7 +37,7 @@ const VivoPage = ({handleVisit}) => {
               mobile={mobile.fields} 
               handleVisit={handleVisit}
               API_URL={API_URL}
-              vivoMobiles={vivoMobiles}/>
+              />
             ))
           }
         </section>  

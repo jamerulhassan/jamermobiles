@@ -5,7 +5,7 @@ import { useState,useEffect,useRef } from 'react'
 import Disclimer from './Disclimer'
 import Notice from './Notice'
 import Offers from './Offers'
-const BuyPage = ({individualData,isLoading,fetchError}) => {
+const BuyPage = ({individualData}) => {
   
   const imgAndDetails__figure = useRef(null);
     const phoneDetails = useRef(null);
@@ -73,9 +73,6 @@ const BuyPage = ({individualData,isLoading,fetchError}) => {
     };
   return (
     <main>
-      {isLoading && <p className='loading'>Your item is loading...</p>}
-          {fetchError && <p>{`error:${fetchError}`}</p>}
-          {!isLoading && !fetchError &&
       <div className="BuyPage">
         <div className="BuyPage__imgAndDetails BuyPage__Childrens">
           <figure ref={imgAndDetails__figure} className={`imgAndDetails imgAndDetails__figure ${isImgAndDetailsFigureVisible ? 'animate' : ''}`}>
@@ -119,7 +116,6 @@ const BuyPage = ({individualData,isLoading,fetchError}) => {
         <h3 className='buy__buyButton'>Buy</h3>
       </div>
     </div>
-}
   </main>
   )
 }
