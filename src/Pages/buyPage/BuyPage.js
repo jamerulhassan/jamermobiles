@@ -2,9 +2,9 @@ import React from 'react'
 import './buyPage.css'
 import { FaChevronDown} from 'react-icons/fa6'
 import { useState,useEffect,useRef } from 'react'
-import Disclimer from './Disclimer'
-import Notice from './Notice'
-import Offers from './Offers'
+import Disclimer from '../../Components/buyPageComponents/Disclimer'
+import Notice from '../../Components/buyPageComponents/Notice'
+import Offers from '../../Components/buyPageComponents/Offers'
 const BuyPage = ({individualData}) => {
   
   const imgAndDetails__figure = useRef(null);

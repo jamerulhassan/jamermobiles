@@ -1,9 +1,9 @@
 import React from 'react'
 import './About.css'
-import DevInfo from './DevInfo';
+import DevInfo from '../../Components/aboutPageComponents/DevInfo';
 import { useEffect,useState,useRef } from 'react';
-import DevVoice from './DevVoice';
-import DevVision from './DevVision';
+import DevVoice from '../../Components/aboutPageComponents/DevVoice';
+import DevVision from '../../Components/aboutPageComponents/DevVision';
 const About = () => {
   const About = useRef(null);
     const msgOne = useRef(null);

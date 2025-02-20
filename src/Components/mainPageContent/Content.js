@@ -1,10 +1,10 @@
 import React from 'react'
 import './content.css'
-import IntroductionContentOne from './IntroductionContentOne'
-import CompanyParameter from './CompanyParameter'
-import BrandList from './BrandList'
+import wallpaperThree from '../../images/wallpaperThree.jpg'
+import IntroductionContentOne from '../insideContent/IntroductionContentOne'
+import CompanyParameter from '../insideContent/CompanyParameter'
+import BrandList from '../insideContent/BrandList'
 import { IoIosArrowDown } from "react-icons/io";
-import wallpaperThree from './images/wallpaperThree.jpg'
 import { useRef,useEffect,useState } from 'react'
 const Content = () => {
   const elementToCheckRef = useRef(null);

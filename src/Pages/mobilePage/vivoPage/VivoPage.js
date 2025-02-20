@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import './mobilephoneList.css'
-import DisplayPhones from './displayPhones';
-
+import '../commonMobileCss/mobilephoneList.css'
+import DisplayPhones from '../../../Components/mobilePagesComponent/DisplayPhones'
 const VivoPage = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/vivo';
   const [vivoMobiles, setVivoMobiles] = useState([])

@@ -1,7 +1,7 @@
 import React from 'react'
-import './mobilephoneList.css'
+import '../commonMobileCss/mobilephoneList.css'
 import { useEffect, useState } from 'react'
-import DisplayPhones from './displayPhones'
+import DisplayPhones from '../../../Components/mobilePagesComponent/DisplayPhones'
 const Poco = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/poco'
     const [pocoMobiles, setpocoMobiles] = useState([])

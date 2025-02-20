@@ -1,5 +1,5 @@
 import React from 'react'
-import jamerul from './images/jamerul.png'
+import jamerul from '../../images/jamerul.png'
 import { FaInstagram } from "react-icons/fa";
 import { FiMail } from 'react-icons/fi'
 import { FaXTwitter } from "react-icons/fa6";

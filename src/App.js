@@ -1,18 +1,18 @@
-import Header from "./Header";
-import Content from "./Content";
+import Header from "./Components/Header/Header";
+import Content from "./Components/mainPageContent/Content";
 import './App.css';
 import {  Routes, Route } from 'react-router-dom';
-import Footer from "./Footer";
-import VivoPage from "./VivoPage";
-import Samsung from "./Samsung";
-import Realme from "./Realme";
-import Poco from "./Poco";
-import Apple from "./Apple"
-import OnePlus from "./OnePluse"
-import BuyPage from "./BuyPage";
-import About from "./About";
-import Help from "./Help";
-import MissingPage from "./MissingPage";
+import Footer from "./Components/Footer/Footer";
+import VivoPage from "./Pages/mobilePage/vivoPage/VivoPage";
+import Samsung from "./Pages/mobilePage/samsungPage/Samsung";
+import Realme from "./Pages/mobilePage/realmePage/Realme";
+import Poco from "./Pages/mobilePage/pocoPage/Poco";
+import Apple from "./Pages/mobilePage/applePage/Apple"
+import OnePlus from "./Pages/mobilePage/onePlusPage/OnePluse"
+import BuyPage from "./Pages/buyPage/BuyPage";
+import About from "./Pages/aboutPage/About";
+import Help from "./Pages/helpPage/Help";
+import MissingPage from "./Pages/missingPage/MissingPage";
 import ScrollToTop from "./ScrollToTop";
 import { useState } from "react";
 function App() {
