@@ -1,9 +1,9 @@
 import React from 'react'
 import './content.css'
 import wallpaperThree from '../../images/wallpaperThree.jpg'
-import IntroductionContentOne from '../insideContent/IntroductionContentOne'
-import CompanyParameter from '../insideContent/CompanyParameter'
-import BrandList from '../insideContent/BrandList'
+import IntroductionContentOne from './insideContent/IntroductionContentOne'
+import CompanyParameter from './insideContent/CompanyParameter'
+import BrandList from './insideContent/BrandList'
 import { IoIosArrowDown } from "react-icons/io";
 import { useRef,useEffect,useState } from 'react'
 const Content = () => {

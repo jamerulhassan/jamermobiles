@@ -1,9 +1,9 @@
 
 import './companyParameter.css'
 import { useState, useRef, useEffect } from 'react';
-import wallpaperThired from '../../images/wallpaperThired.png'
-import imgOfProductOffering from '../../images/imgOfProductOffering.png'
-import imgOfPriceAndPromotions from '../../images/imgOfPriceAndPromotions.png'
+import wallpaperThired from '../../../images/wallpaperThired.png'
+import imgOfProductOffering from '../../../images/imgOfProductOffering.png'
+import imgOfPriceAndPromotions from '../../../images/imgOfPriceAndPromotions.png'
 const CompanyParameter = () => {
     const imgOfStoreOverView = useRef(null);
     const imgOfproductOfferings = useRef(null);
