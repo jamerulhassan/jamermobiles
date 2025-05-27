@@ -7,12 +7,9 @@
     display: flex;
     background-color: rgb(5, 5, 5);
     min-height: 100%;
-    position: relative;
 }
 .loadingContainer{
-    position: absolute;
-    top: 30vh;
-    left: 44%;
+    margin: 100px auto;
 }
 .circle{
     display: inline-block;
