@@ -2,6 +2,7 @@ import React from 'react'
 import '../commonMobileCss/mobilephoneList.css'
 import  { useEffect, useState } from 'react'
 import DisplayPhones from '../../../Components/mobilePagesComponent/DisplayPhones'
+import Loading from '../../../Components/loading/Loading'
 const Realme = ({handleVisit}) => {
   const API_URL = 'https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/realme'
     const [realmeMobiles, setrealmeMobiles] = useState([])
@@ -26,7 +27,7 @@ const Realme = ({handleVisit}) => {
     return (
       <main>
           <section className="MobilePhoneList">
-          {isLoading && <p className='loading'>Items are loading...</p>}
+          {isLoading && <Loading />}
               {fetchError && <p>{`error:${fetchError}`}</p>}
               {!isLoading && !fetchError &&
                 realmeMobiles.map((mobile)=>(

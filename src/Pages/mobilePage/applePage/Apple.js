@@ -2,6 +2,7 @@ import React from 'react'
 import '../commonMobileCss/mobilephoneList.css'
 import { useEffect, useState } from 'react'
 import DisplayPhones from '../../../Components/mobilePagesComponent/DisplayPhones'
+import Loading from '../../../Components/loading/Loading'
 const Apple = ({handleVisit}) => {
   const API_URL='https://firestore.googleapis.com/v1/projects/jamermobiles/databases/(default)/documents/apple';
 
@@ -27,7 +28,7 @@ const Apple = ({handleVisit}) => {
     return (
       <main>
           <section className="MobilePhoneList">
-            {isLoading && <p className='loading'>Items are loading...</p>}
+            {isLoading && <Loading />}
             {fetchError && <p>{`error:${fetchError}`}</p>}
             {!isLoading && !fetchError &&
               appleMobiles.map((mobile)=>(
