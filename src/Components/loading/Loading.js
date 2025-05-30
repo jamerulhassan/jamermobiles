@@ -4,7 +4,6 @@ const Loading = () => {
   return (
     <div class = "loadingDiv">
         <div class="loadingContainer">
-            
                 <div class="first circle"> </div>
                 <div class="second circle"></div>
                 <div class="third circle"> </div>

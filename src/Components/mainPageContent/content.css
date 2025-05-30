@@ -66,11 +66,10 @@
     .informationOne{
         text-transform: uppercase;
         font-family: var(--SECONDFF);
-        font-size: var(--THIRDFS);
-        font-weight: 900;
+        font-size: var(--SECONDFS);
+        font-weight: 300;
         text-align: center;
         overflow-wrap: anywhere;
-        font-family: 'Helvetica Neue', sans-serif;
     }
     .navigation{
         position: absolute;

@@ -55,12 +55,11 @@
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-        line-height: var(--LINEHEIGHT);
         font-family: var(--SECONDFF);
         
     }
     .msgOne h2,.msgTwo h2{
-        font-size: var(--THIRDFS);
+        font-size: var(--SECONDFS);
         font-weight: 300;
         text-align: center;
         margin-bottom: 10px;
@@ -72,7 +71,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        line-height: var(--LINEHEIGHT);
         gap: 10vh;
     }
     .msgOne p,.msgTwo p{

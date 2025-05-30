@@ -28,7 +28,7 @@
     .mobile__figure{
         width: clamp(50px,90vw,250px);
         height: 100%;
-        background-color: var(--SECONDCOLOR);
+        background-color: var(--SECONDBGCOLOR);
         border-radius: 20px;
         padding: 30px;
     }
@@ -41,11 +41,11 @@
         transition: transform 0.5s;
     }
     .visit a{
-        background-color: var(--BTNCOLOR);
+        font-family: var(--SECONDFF);
+        background-color: var(--SECONDBGCOLOR);
         color: var(--SECONDFC);
         padding: 10px 50px;
         border-radius: 20px;
-        color: var(--SECONDFC);
         text-decoration: none;
     }
     .visit{
@@ -67,5 +67,8 @@
     .loading{
         text-align: center;
         font-size: 30px;
+    }
+    .price{
+        font-family: var(--SECONDFF);
     }
 }

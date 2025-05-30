@@ -11,7 +11,7 @@
         gap: 30px;
     }
     .errorMsg__msg{
-        font-size: var(--THIRDFS);
+        font-size: var(--SECONDFS);
         color: #fb641b;
     }
     .errorMsg__link{

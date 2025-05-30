@@ -23,12 +23,12 @@
         border-width: 0 0 2px 0;
      }
     .content__item {
-        color: rgb(192, 183, 183);
+        color: var(--FOOTERCOLOR);
     }
     .socialmedias__item{
         display: flex;
         gap: 5px;
-        color: rgb(192, 183, 183);
+        color: var(--FOOTERCOLOR);
     }
     .content5{
         flex-basis: 100%;
@@ -46,7 +46,7 @@
         color: rgb(192, 183, 183);
     }
     .content__item:hover,.content__item address:hover{
-        color:var(--FC)
+        color:var(--FOOTERHOVERCOLOR)
     }
     .socialmedias__item{
         cursor: pointer;

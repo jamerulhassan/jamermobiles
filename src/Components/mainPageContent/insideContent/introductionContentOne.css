@@ -8,7 +8,7 @@
         width: 100%;
         transform: translateY(100px);
         opacity: 0;
-        animation: welcomeAnimation 0.5s linear forwards;
+        animation: welcomeAnimation 0.3s linear forwards;
     }
     @keyframes welcomeAnimation{
         0%{
@@ -28,15 +28,48 @@
         width: 100%;
         display: flex;
         overflow-wrap:anywhere;
-        
+        font-family: var(--SECONDFF);
         font-size:var(--SECONDFS);
         font-style: normal;
         font-weight: 800;
+
+        
+    }
+    .content__h2 span { 
+        animation: 0.9s;
+        animation-name: leMovingBackFromRight; 
+        transform-origin: bottom ;
+        transition: ease-in-out;
+    }
+    .content__h2 :nth-child(2){
+        animation-delay: 0.2s;
+    }
+    .content__h2 :nth-child(3){
+        animation-delay: 0.3s;
+    }
+    .content__h2 :nth-child(4){
+        animation-delay: 0.4s;
+    }
+    .content__h2 :nth-child(5){
+        animation-delay: 0.5s;
+    }
+    .content__h2 :nth-child(6){
+        animation-delay: 0.6s;
+    }
+    .content__h2 :nth-child(7){
+        animation-delay: 0.7s;
+    }
+    @keyframes leMovingBackFromRight {
+        40% { 
+            transform: rotate(30deg)
+        }
+        100% {
+            transform: rotate(0deg);
+        }
     }
     .content__p{
         width: 100%;
         display: flex;
-        line-height: var(--LINEHEIGHT);
         font-family: var(--SECONDFF);
         font-style: normal; 
         letter-spacing: 1.3px;

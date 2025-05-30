@@ -8,26 +8,38 @@
     offset: 60px;
 }
 :root{
-    --FF:"Source Sans Pro", sans-serif;
-    --SECONDFF:"Urbanist", sans-serif;
-    --THIRDFF: "Barlow Condensed", sans-serif;
-    --BGCOLOR:black;
-    --SECONDBGCOLOR:white;
-    --FC:white;
-    --SECONDFC:black;
+    /* Font size variables */
     --FS:clamp(1rem, 1.5vw, 3rem);
     --LOGOFS:clamp(1.7rem,10vw,2.5rem);
     --SECONDFS:clamp(3rem, 5vw, 4rem);
-    --THIRDFS:clamp(2rem, 5vw, 4rem);
-    --FIRSTCOLOR:#fd0380;
-    --SECONDCOLOR: #171717;
-    --THIRDCOLOR: orange;
-    --FOURTHCOLOR:#99a5b6;
-    --LINEHEIGHT:clamp(1.5,5vw,2rem);
-    --BTNCOLOR:#008dfb;
-    --SHADOWCOLOR:rgba(193, 186, 193, 0.965);
-    --FOOTERBGCOLOR:#10131a;
-    --FOOTERFCONE:#99a5b6;
+    /* Background colors */
+    --BGCOLOR:black;
+    --SECONDBGCOLOR:white;
+    --GIFTCOLOR:#FFD700;
+    /* Text color */
+    --FC:white;
+    --SECONDFC:black;
+    --FIRSTCOLOR:#FFD700; 
+    --FOOTERCOLOR :  grey;
+    --FOOTERHOVERCOLOR : white;
+    /* Font familiy variables */
+    --LOGOFF:"Source Sans Pro", sans-serif;
+    --FF:"Source Sans Pro", sans-serif;
+    --SECONDFF:"Urbanist", sans-serif;
+    --THIRDFF: "Barlow Condensed", sans-serif;
+    
+--LINEHEIGHT:clamp(1.5,5vw,2rem);
+    
+} 
+@media (prefers-color-scheme: light) {
+  :root {
+    --BGCOLOR:white;
+    --SECONDBGCOLOR:#171717;
+    --FC:black;
+    --SECONDFC: white;
+    --FOOTERCOLOR :  rgb(113, 112, 112);
+    --FOOTERHOVERCOLOR : black;
+  }
 }
 body{
     background-color: var(--BGCOLOR);

@@ -5,8 +5,8 @@
 }
 .loadingDiv{
     display: flex;
-    background-color: rgb(5, 5, 5);
-    min-height: 100%;
+    background-color: var(--BGCOLOR);
+    min-height: 100vh;
 }
 .loadingContainer{
     margin: 100px auto;
@@ -15,7 +15,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: #fdfcfc;
+    background-color: var(--SECONDBGCOLOR);
     border-radius: 50px;
     border-bottom: 1px;
     opacity: 0;
@@ -47,7 +47,7 @@
     }
 }
 .border{
-    border:  #fafafa solid;
+    border:  var(--SECONDBGCOLOR) solid;
     border-width: 0px 0px 1.5px 0px;
     animation: borderLine 0.3s 0.5s linear forwards ;
     transform: scaleX(0);

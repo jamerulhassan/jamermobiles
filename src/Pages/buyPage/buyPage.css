@@ -64,7 +64,8 @@
     }
     .iconsOfGift{
         align-self: center;
-        background-color: var(--SECONDCOLOR);
+        background-color: var(--SECONDBGCOLOR);
+        color: var(--GIFTCOLOR);
         padding: 5px;
         border-radius: 5px;
     }
@@ -99,10 +100,12 @@
         border-radius: 25px;
     }
     .buy__priceOfPhone{
-        background-color: var(--SECONDCOLOR);
+        background-color: var(--SECONDBGCOLOR);
+        color: var(--SECONDFC);
     }
     .buy__buyButton{
-        background-color: var(--BTNCOLOR);
+        background-color: var(--SECONDBGCOLOR);
+        color: var(--SECONDFC);
     }
     .buy__buyButton:hover{
         transform: scale(1.05);
