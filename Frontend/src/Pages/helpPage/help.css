@@ -1,0 +1,74 @@
+@media all and (min-width:52px){
+    .help{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        padding: 0 20px;
+    }
+    .help__contentDivs{
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+    .navigationArrow a{
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: var(--FC);
+    }
+    .slogan,.contact__slogan,.socialmedia__slogan,.contact__title{
+        font-family: var(--SECONDFF);
+        font-size: var(--SECONDFS);
+    }
+    .contact__Information{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        overflow-wrap: anywhere;
+    }
+    .contact__ways{
+        font-family: var(--SECONDFF);
+        line-height: var(--LINEHEIGTH);
+        display: flex;
+        flex-flow: column;
+        gap: 10px;
+    }
+    .socialmedia{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 40px;
+    }
+    .socialMedia__logo{
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+    }
+    .slogan,
+    .socialmedia,
+    .contact__slogan,
+    .contact__ways,
+    .socialmedia__slogan{
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out ;
+    }
+    .slogan.animate,
+    .socialmedia.animate,
+    .contact__slogan.animate,
+    .contact__ways.animate,
+    .socialmedia__slogan.animate{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

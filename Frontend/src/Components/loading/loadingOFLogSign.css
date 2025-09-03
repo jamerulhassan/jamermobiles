@@ -1,0 +1,43 @@
+.outerBox{
+    height: 100%;
+    width: 100%;
+}
+.line{
+    border: solid rgb(223, 207, 207) 1px;
+    border-radius: 100px;
+    border-width: 5px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    animation: loadingOfSignLog 1s infinite ;
+    }
+    @keyframes loadingOfSignLog {
+        25%{
+        border-block-start-color:var(--BGCOLOR);
+        border-inline-end-color: var(--FOOTERCOLOR);
+        border-block-end-color: var(--FOOTERCOLOR);
+        border-inline-start-color: var(--FOOTERCOLOR);
+        
+        }
+        50%{
+        border-block-start-color:var(--FOOTERCOLOR);
+        border-inline-end-color: var(--BGCOLOR);
+        border-block-end-color: var(--FOOTERCOLOR);
+        border-inline-start-color: var(--FOOTERCOLOR);
+        
+        }
+        75%{
+        border-block-start-color:var(--FOOTERCOLOR);
+        border-inline-end-color: var(--FOOTERCOLOR);
+        border-block-end-color: var(--BGCOLOR);
+        border-inline-start-color: var(--FOOTERCOLOR);
+        
+        }
+        100%{
+        border-block-start-color:var(--FOOTERCOLOR);
+        border-inline-end-color: var(--FOOTERCOLOR);
+        border-block-end-color: var(--FOOTERCOLOR);
+        border-inline-start-color: var(--BGCOLOR);
+        background-color: black;
+        }
+    }

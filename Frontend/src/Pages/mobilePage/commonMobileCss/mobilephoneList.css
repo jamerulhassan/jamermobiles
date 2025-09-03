@@ -1,0 +1,74 @@
+@media all and (min-width:52px){
+    .MobilePhoneList{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .MobilePhoneList__mobile{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .phones{
+        opacity: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row wrap;
+        gap: 40px;
+        transform: translateY(10px);
+        transition: opacity 1s ease-out, transform 1s ease-out ;
+    }
+    .phones.animate{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .mobile__figure{
+        width: clamp(50px,90vw,250px);
+        height: 100%;
+        background-color: var(--SECONDBGCOLOR);
+        border-radius: 20px;
+        padding: 30px;
+    }
+    .mobile__figure img{
+        width: 100%;
+        height: 100%;
+    }
+    .mobile__figure img:hover{
+        transform: scale(1.05);
+        transition: transform 0.5s;
+    }
+    .visit a{
+        font-family: var(--SECONDFF);
+        background-color: var(--SECONDBGCOLOR);
+        color: var(--SECONDFC);
+        padding: 10px 50px;
+        border-radius: 20px;
+        text-decoration: none;
+    }
+    .visit{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .visit:hover{
+        cursor:pointer;
+        transform: scale(1.02);
+        transition: transform 0.3s;
+    }
+    .mobile__figurecaption{
+        font-family: var(--SECONDFF);
+        line-height: clamp(1.4rem,50vw,1.6rem);
+    }
+    .nameOfMobile{
+        margin-bottom: 10px;
+    }
+    .loading{
+        text-align: center;
+        font-size: 30px;
+    }
+    .price{
+        font-family: var(--SECONDFF);
+    }
+}
