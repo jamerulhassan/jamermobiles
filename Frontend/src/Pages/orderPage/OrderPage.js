@@ -81,26 +81,26 @@ const OrderPage = ({individualData}) => {
               <tbody className='orderTebleTBody'>
                 <tr className='inputRows'>
                   <th><label htmlFor="name">Name </label></th>
-                  <td><input type="text" name="name" id="name" onChange={(e)=>setName(e.target.value)} /></td>
+                  <td><input type="text" name="name" id="name" onChange={(e)=>setName(e.target.value)} style={{color: "var(--FC)"}}/></td>
                 </tr>
                 <tr className='inputRows'>
                   <th><label htmlFor="phoneNumber">Phone no</label></th>
-                  <td ><input type="text" name="phoneNumber" id="phoneNumber" onChange={(e)=>setPhoneno(e.target.value)} /></td>
+                  <td ><input type="text" name="phoneNumber" id="phoneNumber" onChange={(e)=>setPhoneno(e.target.value)} style={{color: "var(--FC)"}}/></td>
                 </tr>
                 <tr className='inputRows'>
                   <th><label htmlFor="address">Address</label></th>
-                  <td ><input type="text" name="address" id="address" onChange={(e)=>setaddress(e.target.value)} /></td>
+                  <td ><input type="text" name="address" id="address" onChange={(e)=>setaddress(e.target.value)} style={{color: "var(--FC)"}}/></td>
                 </tr >
-                <tr className='inputRows'>
+                <tr className='inputRows'style={{color: "var(--FC)"}}>
                   <th><label htmlFor="payMethod">Pay method</label></th>
                   <td >Cash on delivery<input type="checkbox" name="payMethod" id="payMethod" defaultChecked /></td>
                 </tr>
               </tbody>
               <tfoot>
                 <tr>
-                  <td>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>       
+                  <td style={{color: "var(--FC)"}}>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>       
                   <td colSpan={2} align='right'>
-                    <input type="submit" name="submit" value="Buy"/>
+                    <input type="submit" name="submit" value="Buy" style={{color: "var(--SECONDFC)"}}/>
                   </td>
                 </tr>
               </tfoot>

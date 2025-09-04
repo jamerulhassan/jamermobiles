@@ -77,21 +77,21 @@ const SignupForm = ({handleLogAndSign, loginStatus}) => {
               <tbody className='loginSignTbody'>
                 <tr className='inputRows'>
                   <th align='centre'><label htmlFor="userName">User name </label></th>
-                  <td ><input type="text" name="userName" id="userName" onChange={(e)=>setuserName(e.target.value)} required /> </td>
+                  <td ><input type="text" name="userName" id="userName" onChange={(e)=>setuserName(e.target.value)} required style={{color: "var(--FC)"}}/> </td>
                   
                 </tr>
                 <tr className='inputRows'>
                   <th align='centre'><label htmlFor="password">Password </label></th>
-                  <td ><input type="password" name="password" id="password" onChange={(e)=>setpassword(e.target.value)} required/></td>
+                  <td ><input type="password" name="password" id="password" onChange={(e)=>setpassword(e.target.value)} required style={{color: "var(--FC)"}}/></td>
                 </tr>
                 <tr className='inputRows'>
                   <th align='centre'><label htmlFor="address">Address </label></th>
-                  <td ><input type="text" name="address" id="address" onChange={(e)=>setaddress(e.target.value)} required/></td>
+                  <td ><input type="text" name="address" id="address" onChange={(e)=>setaddress(e.target.value)} required style={{color: "var(--FC)"}}/></td>
                 </tr>
                 <tr className='inputRows'>
-                  <td>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>
+                  <td style={{color: "var(--FC)"}}>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>
                   <td align='centre'>
-                    <input type="submit" value="Signup" name="Signup" /> <br />
+                    <input type="submit" value="Signup" name="Signup" style={{color: "var(--SECONDFC)"}}/> <br />
                 </td>
                 
                 </tr>
@@ -99,17 +99,17 @@ const SignupForm = ({handleLogAndSign, loginStatus}) => {
             <tbody className='loginSignTbody'>
                 <tr className='inputRows'>
                   <th align='centre'><label htmlFor="userName">User name :</label></th>
-                  <td ><input type="text" name="userName" id="userName" onChange={(e)=>setuserName(e.target.value)} required/> </td>
+                  <td ><input type="text" name="userName" id="userName" onChange={(e)=>setuserName(e.target.value)} required style={{color: "var(--FC)"}}/> </td>
                   
                 </tr>
                 <tr className='inputRows'>
                   <th align='centre'><label htmlFor="password">Password :</label></th>
-                  <td ><input type="password" name="password" id="password" onChange={(e)=>setpassword(e.target.value)} required/></td>
+                  <td ><input type="password" name="password" id="password" onChange={(e)=>setpassword(e.target.value)} required style={{color: "var(--FC)"}}/></td>
                 </tr>
                 <tr className='inputRows'>
-                  <td align='centre'>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>
+                  <td align='centre' style={{color: "var(--FC)"}}>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>
                   <td align='centre'>
-                    <input type="submit" value="Signout" name="Signout" /> <br />
+                    <input type="submit" value="Signout" name="Signout" style={{color: "var(--SECONDFC)"}}/> <br />
                 </td>
                 </tr>
             </tbody> }

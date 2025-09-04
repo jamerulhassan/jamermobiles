@@ -62,26 +62,26 @@ const LogInForm = ({handleLogAndSign, loginStatus}) => {
             <tbody className='loginSignTbody'>
               <tr className='inputRows'>
                 <th align='centre'><label htmlFor="userName">User name </label></th>
-                <td  colSpan={2}><input type="text" name="userName" id="userName" onChange={(e)=>setuserName(e.target.value)} required/> </td>
+                <td  colSpan={2}><input type="text" name="userName" id="userName" onChange={(e)=>setuserName(e.target.value)} required style={{color: "var(--FC)"}}/> </td>
               </tr>
               <tr className='inputRows'>
                 <th align='centre'><label htmlFor="password">Password </label></th>
-                <td  colSpan={2}><input type="password" name="password" id="password" onChange={(e)=>setpassword(e.target.value)} required/></td>
+                <td  colSpan={2}><input type="password" name="password" id="password" onChange={(e)=>setpassword(e.target.value)} required style={{color: "var(--FC)"}}/></td>
               </tr>
               <tr className='inputRows'>
                 <td align='centre'>
-                <Link to="/signup" > <p  style={{ paddingTop:"5px",color:'#ffffff' }} className='singnUpButton'>Signup</p> </Link> <br />
+                <Link to="/signup" > <p  style={{ paddingTop:"5px",color:"var(--FC)" }} className='singnUpButton'>Signup</p> </Link> <br />
 
                 </td>
-                <td >{isLoading ? <LoadingOFLogSign /> : errMsg }</td>
+                <td style={{color: "var(--FC)"}}>{isLoading ? <LoadingOFLogSign /> : errMsg }</td>
                 <td cstyle={{ textAlign: 'right' }} >
-                  <input type="submit" value="Login" name="logIn" /> <br />
+                  <input type="submit" value="Login" name="logIn" style={{color: "var(--SECONDFC)"}}/><br />
                 </td>
               </tr>
             </tbody> :
             <tbody className='loginSignTbody'>
-              <tr className='inputRows'><td>Are you sure want to logout!!</td></tr>
-              <tr className='inputRows'><td align='center'><input type="submit" value="Logout" name='Logout'/></td></tr>
+              <tr className='inputRows'><td style={{color:"var(--FC)" }}>Are you sure want to logout!!</td></tr>
+              <tr className='inputRows'><td align='center'><input type="submit" value="Logout" name='Logout' style={{color: "var(--SECONDFC)"}}/></td></tr>
             </tbody>
             }
           </table>
